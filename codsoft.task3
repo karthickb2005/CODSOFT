@@ -1,0 +1,40 @@
+import torch
+from torchvision import transforms
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from PIL import Image
+resnet = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)
+resnet.eval()
+tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI")
+model = GPT2LMHeadModel.from_pretrained("EleutherAI")
+model.eval()
+ def preprocess_image(image_path):
+    image = Image.open(image_path)
+    preprocess = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
+    image = preprocess(image)
+    image = image.unsqueeze(0)
+    return image
+ def generate_image_features(image_path):
+    image = preprocess_image(image_path)
+    with torch.no_grad():
+        features = resnet(image)
+    features = features.squeeze(0)
+    return features
+ def generate_caption(image_features):
+    image_text = " ".join([str(x.item()) for x in image_features])
+    input_text = "The image features are: {image_text}. Describe the image."
+    input_ids = tokenizer.encode(input_text, return_tensors="pt")
+    with torch.no_grad():
+        output = model.generate(input_ids, max_length=100, num_beams=5, no_repeat_ngram_size=2)
+    caption = tokenizer.decode(output[0], skip_special_tokens=True)
+    return caption
+ def main():
+    image_path = "path/to/your/image.jpg"
+    image_features = generate_image_features(image_path)
+    caption = generate_caption(image_features)
+    print("Generated Caption:", caption)
+ if __name__ == "__main__":
+    main()
