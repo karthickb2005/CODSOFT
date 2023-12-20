@@ -1,0 +1,20 @@
+import cv2
+import face_recognition
+image_path = "path/to/your/image.jpg"
+image = cv2.imread(image_path)
+normal_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+face_locations = face_recognition.face_locations(normal_image)
+known_face_encodings = []
+known_face_names = []
+for (top, right, bottom, left) in face_locations:
+    cv2.rectangle(image, (left, top), (right, bottom), (0, 255, 0), 2)
+    face_encoding = face_recognition.face_encodings(rgb_image, [(top, right, bottom, left)])[0]
+    matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+    name = "Unknown"
+    if True in matches:
+        first_match_index = matches.index(True)
+        name = known_face_names[first_match_index]
+    cv2.putText(image, name, (left + 6, bottom - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+cv2.imshow("Face Recognition", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
