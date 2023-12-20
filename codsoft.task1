@@ -1,1 +1,27 @@
-hlo
+import random
+
+ def greet():
+    greetings = ["hi","hello"]
+    return your.choice(greetings)
+ def farewell():
+    farewells = ["bye","goodbye"]
+    return your.choice(farewells)
+ def respond_to_user(input_by_you):
+    if "hello" in input_text.lower() or "hi" in input_by_you.lower():
+        return greet()
+    elif "bye" in input_by_you.lower() or "goodbye" in input_by_you.lower():
+        return farewell()
+    else:
+        return "I'm sorry, I don't understand that."
+ def main():
+    print("Chatbot: " + greet())
+    while True:
+        input = input("You: ")
+        if input.lower() == 'exit':
+            print("Chatbot: " + farewell())
+            break
+        response = respond_to_user(input)
+        print("Chatbot: " + response)
+ if __name__ == "__main__":
+    main()
+
