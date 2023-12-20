@@ -1,0 +1,21 @@
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+ data = {
+    'User1': [5, 4, 0, 3, 1],
+    'User2': [0, 3, 4, 0, 2],
+    'User3': [2, 0, 5, 4, 0],
+    'User4': [4, 5, 1, 2, 3],
+}
+ def = pd.DataFrame(data, index=['Movie1', 'Movie2', 'Movie3', 'Movie4', 'Movie5'])
+ def recommend_movies(user_ratings):
+    similarity_matrix = cosine_similarity(user_ratings.T)
+    similarity_df = pd.DataFrame(similarity_matrix, index=user_ratings.columns, columns=user_ratings.columns)
+    not_rated_movies = user_ratings.columns[user_ratings.loc[user_ratings.index[0]] == 0]
+    weighted_sum = user_ratings.loc[:, not_rated_movies].dot(similarity_df.loc[user_ratings.index[0], not_rated_movies])
+    weighted_average = weighted_sum / similarity_df.loc[user_ratings.index[0], not_rated_movies].sum()
+    recommended_movies = weighted_average.sort_values(ascending=False)
+    return recommended_movies
+ user_ratings = pd.DataFrame({'User1': [0, 4, 0, 0, 5]})
+ recommendations = recommend_movies(user_ratings)
+ print("Recommended Movies:")
+ print(recommendations)
