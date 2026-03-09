@@ -1,0 +1,84 @@
+{
+  "name": "AIAnalysis",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string"
+    },
+    "analysis_type": {
+      "type": "string",
+      "enum": [
+        "task_assignment",
+        "schedule_optimization",
+        "delay_prediction",
+        "workload_balance",
+        "burnout_detection",
+        "team_formation",
+        "bottleneck_detection",
+        "performance_analysis",
+        "what_if_simulation"
+      ]
+    },
+    "target_entity_type": {
+      "type": "string",
+      "enum": [
+        "task",
+        "project",
+        "member",
+        "workspace"
+      ]
+    },
+    "target_entity_id": {
+      "type": "string"
+    },
+    "input_data": {
+      "type": "object",
+      "description": "Data used for analysis"
+    },
+    "results": {
+      "type": "object",
+      "properties": {
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scores": {
+          "type": "object"
+        },
+        "predictions": {
+          "type": "object"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "number"
+        }
+      }
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Human-readable explanation of AI decision"
+    },
+    "is_applied": {
+      "type": "boolean",
+      "default": false
+    },
+    "applied_by": {
+      "type": "string"
+    },
+    "applied_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "organization_id",
+    "analysis_type"
+  ]
+}

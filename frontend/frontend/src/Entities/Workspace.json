@@ -1,0 +1,64 @@
+{
+  "name": "Workspace",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "description": "Parent organization ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Workspace name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "it",
+        "core_engineering",
+        "business",
+        "marketing",
+        "hr",
+        "finance",
+        "operations",
+        "custom"
+      ],
+      "description": "Primary domain classification"
+    },
+    "custom_domain": {
+      "type": "string",
+      "description": "Custom domain name if domain is custom"
+    },
+    "color": {
+      "type": "string",
+      "description": "Workspace color for UI"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Workspace icon name"
+    },
+    "member_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "leader_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Team leaders/managers"
+    },
+    "is_archived": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "organization_id",
+    "name"
+  ]
+}

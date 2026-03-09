@@ -1,0 +1,47 @@
+2026-02-18 15:11:49 [[32minfo[39m]: --- Starting AI Self-Optimization Verification [opt-test-1771407709494] ---
+
+--- Initial Rankings ---
+[
+  {
+    "provider": "gemini",
+    "score": "1.00",
+    "timeout": 8000
+  },
+  {
+    "provider": "openai",
+    "score": "0.80",
+    "timeout": 8000
+  }
+]
+
+--- Processing requests to build performance history ---
+2026-02-18 15:11:49 [opt-test-1771407709494-0] [[31merror[39m]: G£û Service failure: GeminiProvider [Count: 1] - retry is not defined
+2026-02-18 15:11:49 [[32minfo[39m]: =ƒºá Optimizer updated ranking { provider: gemini, newScore: 0.50, adaptiveTimeout: 4000ms, requestId: opt-test-1771407709494-0 }
+2026-02-18 15:11:49 [opt-test-1771407709494-0] [[33mwarn[39m]: GÜá AI Provider (Gemini) failed GÇö trying next
+2026-02-18 15:11:49 [opt-test-1771407709494-0] [[32minfo[39m]: G£ö Local Fallback engaged for AI prompt
+2026-02-18 15:11:49 [[32minfo[39m]: =ƒÆ¦ AI Cost Estimate { provider: fallback, tokens: 0, cost: $0.000000, requestId: opt-test-1771407709494-0 }
+2026-02-18 15:11:49 [opt-test-1771407709494-1] [[31merror[39m]: G£û Service failure: GeminiProvider [Count: 2] - retry is not defined
+2026-02-18 15:11:49 [opt-test-1771407709494-1] [[33mwarn[39m]: GÜá AI Provider (Gemini) failed GÇö trying next
+2026-02-18 15:11:49 [opt-test-1771407709494-1] [[32minfo[39m]: G£ö Local Fallback engaged for AI prompt
+2026-02-18 15:11:49 [[32minfo[39m]: =ƒÆ¦ AI Cost Estimate { provider: fallback, tokens: 0, cost: $0.000000, requestId: opt-test-1771407709494-1 }
+2026-02-18 15:11:49 [opt-test-1771407709494-2] [[31merror[39m]: G£û Service failure: GeminiProvider [Count: 3] - retry is not defined
+2026-02-18 15:11:49 [opt-test-1771407709494-2] [[31merror[39m]: GÜá Circuit OPENED for GeminiProvider. Service will be skipped for 60s.
+2026-02-18 15:11:49 [opt-test-1771407709494-2] [[33mwarn[39m]: GÜá AI Provider (Gemini) failed GÇö trying next
+2026-02-18 15:11:49 [opt-test-1771407709494-2] [[32minfo[39m]: G£ö Local Fallback engaged for AI prompt
+2026-02-18 15:11:49 [[32minfo[39m]: =ƒÆ¦ AI Cost Estimate { provider: fallback, tokens: 0, cost: $0.000000, requestId: opt-test-1771407709494-2 }
+
+--- Rankings After Usage ---
+[
+  {
+    "provider": "openai",
+    "score": "0.80",
+    "timeout": 8000
+  },
+  {
+    "provider": "gemini",
+    "score": "0.50",
+    "timeout": 4000
+  }
+]
+
+G£ö Verification SUCCESS: Optimizer calculated scores and timeouts.

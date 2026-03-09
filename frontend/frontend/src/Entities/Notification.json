@@ -1,0 +1,70 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "recipient_email": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "task_assigned",
+        "task_due_soon",
+        "task_overdue",
+        "mention",
+        "comment",
+        "status_change",
+        "ai_recommendation",
+        "workload_warning",
+        "burnout_alert",
+        "project_update",
+        "milestone_reached",
+        "performance_review"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "link": {
+      "type": "string",
+      "description": "Link to related entity"
+    },
+    "related_entity_type": {
+      "type": "string"
+    },
+    "related_entity_id": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_email_sent": {
+      "type": "boolean",
+      "default": false
+    },
+    "ai_urgency_score": {
+      "type": "number",
+      "description": "AI-calculated urgency 0-100"
+    }
+  },
+  "required": [
+    "recipient_email",
+    "type",
+    "title",
+    "message"
+  ]
+}

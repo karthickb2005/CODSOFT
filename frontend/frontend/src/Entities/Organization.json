@@ -1,0 +1,76 @@
+{
+  "name": "Organization",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Organization name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Organization description"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Organization logo"
+    },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "technology",
+        "engineering",
+        "business",
+        "healthcare",
+        "education",
+        "finance",
+        "manufacturing",
+        "other"
+      ]
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Organization owner email"
+    },
+    "member_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of member emails"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "timezone": {
+          "type": "string"
+        },
+        "work_hours_start": {
+          "type": "number"
+        },
+        "work_hours_end": {
+          "type": "number"
+        },
+        "work_days": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subscription_tier": {
+      "type": "string",
+      "enum": [
+        "free",
+        "starter",
+        "professional",
+        "enterprise"
+      ],
+      "default": "free"
+    }
+  },
+  "required": [
+    "name",
+    "owner_email"
+  ]
+}

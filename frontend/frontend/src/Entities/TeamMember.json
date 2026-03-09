@@ -1,0 +1,138 @@
+{
+  "name": "TeamMember",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "organization_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "admin",
+        "team_leader",
+        "member"
+      ],
+      "default": "member"
+    },
+    "job_title": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced",
+              "expert"
+            ]
+          },
+          "years_experience": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "availability": {
+      "type": "object",
+      "properties": {
+        "hours_per_week": {
+          "type": "number"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "work_days": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "current_workload": {
+      "type": "number",
+      "description": "Current workload percentage 0-100"
+    },
+    "max_concurrent_tasks": {
+      "type": "number",
+      "default": 5
+    },
+    "active_task_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "performance_metrics": {
+      "type": "object",
+      "properties": {
+        "tasks_completed": {
+          "type": "number"
+        },
+        "on_time_rate": {
+          "type": "number"
+        },
+        "avg_quality_score": {
+          "type": "number"
+        },
+        "productivity_score": {
+          "type": "number"
+        },
+        "consistency_score": {
+          "type": "number"
+        },
+        "contribution_score": {
+          "type": "number"
+        }
+      }
+    },
+    "burnout_risk": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "low"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "user_email",
+    "organization_id"
+  ]
+}

@@ -1,0 +1,59 @@
+2026-02-18 15:18:56 [[32minfo[39m]: --- Starting AI Autonomous Governance Verification [gov-test-1771408136916] ---
+
+--- Scenario 1: Priority User Request ---
+2026-02-18 15:18:56 [[32minfo[39m]: =ƒº¡ Policy Engine decision { class: priority, blacklistCount: 0, requestId: gov-test-1771408136916-vip }
+2026-02-18 15:18:56 [gov-test-1771408136916-vip] [[31merror[39m]: G£û Service failure: GeminiProvider [Count: 1] - retry is not defined
+2026-02-18 15:18:56 [[32minfo[39m]: =ƒºá Optimizer updated ranking { provider: gemini, newScore: 0.50, adaptiveTimeout: 4000ms, requestId: gov-test-1771408136916-vip }
+2026-02-18 15:18:56 [gov-test-1771408136916-vip] [[33mwarn[39m]: GÜá AI Provider (Gemini) failed GÇö policy routing to next
+2026-02-18 15:18:56 [gov-test-1771408136916-vip] [[32minfo[39m]: G£ö Local Fallback engaged for AI prompt
+2026-02-18 15:18:56 [[32minfo[39m]: =ƒÆ¦ AI Cost Estimate { provider: fallback, tokens: 0, cost: $0.000000, requestId: gov-test-1771408136916-vip }
+node : 
+C:\Users\SAMRAAJ M M\
+Desktop\taskpilot\fro
+ntend\server\verify_g
+overnance.js:15
+At line:1 char:1
++ node 
+verify_governance.js 
+> gov_output.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (C:\User   
+ s\SAMRAA...overn    
+ance.js:15:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+    
+console.log(`Traffic 
+Class: ${vipResult.go
+vernance.class}, 
+Timeout: ${vipResult.
+governance.timeout}ms
+`);
+                     
+                     
+             ^
+
+TypeError: Cannot 
+read properties of 
+undefined (reading 
+'class')
+    at testAutonomous
+Governance 
+(C:\Users\SAMRAAJ M M
+\Desktop\taskpilot\fr
+ontend\server\verify_
+governance.js:15:56)
+    at process.proces
+sTicksAndRejections (
+node:internal/process
+/task_queues:103:5)
+
+Node.js v24.12.0

@@ -1,0 +1,72 @@
+﻿ENV LOADED: true
+DISABLE_EMAIL VALUE: undefined
+JWT_SECRET loaded: true
+2026-03-03 19:59:21 [[33mwarn[39m]: ΓÜá Missing environment variables in development: RESEND_API_KEY
+SMTP CONFIG CHECK: {
+  host: 'smtp.gmail.com',
+  port: '587',
+  userExists: true,
+  passExists: true
+}
+2026-03-03 19:59:21 [[32minfo[39m]: --- TaskPilot Backend: Startup [Mode: development] ---
+2026-03-03 19:59:21 [[32minfo[39m]: Γ£ö MongoDB Connected: undefined
+2026-03-03 19:59:21 [[32minfo[39m]: Γ£ö Database connection established
+2026-03-03 19:59:21 [[32minfo[39m]: Γ£ö Email system initialized
+2026-03-03 19:59:21 [[32minfo[39m]: --- Mode: API-ONLY (Background Services Disabled) ---
+2026-03-03 19:59:21 [[32minfo[39m]: --- Seeding Data ---
+2026-03-03 19:59:21 [[32minfo[39m]: Γ£ö MongoDB Connected: localhost
+2026-03-03 19:59:21 [[32minfo[39m]: Γ£ö Seeding completed successfully
+2026-03-03 19:59:21 [[32minfo[39m]: --- Data Seeding Completed ---
+MAILER ENV CHECK: { user: true, pass: true }
+node : Γ£û Critical 
+system error 
+detected 
+(uncaughtException): 
+listen EADDRINUSE: 
+address already in 
+use :::5001
+At line:1 char:1
++ node server.js > 
+log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Γ£û Cri   
+ tical sy... in u    
+se :::5001:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+Error: listen 
+EADDRINUSE: address 
+already in use 
+:::5001
+    at Server.setupLi
+stenHandle [as 
+_listen2] 
+(node:net:1940:16)
+    at 
+listenInCluster 
+(node:net:1997:12)
+    at Server.listen 
+(node:net:2102:7)
+    at 
+C:\Users\SAMRAAJ M M\
+Desktop\taskpilot\fro
+ntend\server\server.j
+s:302:20
+    at new Promise 
+(<anonymous>)
+    at startServer 
+(C:\Users\SAMRAAJ M M
+\Desktop\taskpilot\fr
+ontend\server\server.
+js:300:16)
+    at process.proces
+sTicksAndRejections (
+node:internal/process
+/task_queues:103:5)

@@ -1,0 +1,196 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "workspace_id": {
+      "type": "string"
+    },
+    "organization_id": {
+      "type": "string"
+    },
+    "parent_task_id": {
+      "type": "string",
+      "description": "For subtasks"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "backlog",
+        "todo",
+        "in_progress",
+        "review",
+        "done",
+        "cancelled"
+      ],
+      "default": "todo"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "trivial",
+        "easy",
+        "medium",
+        "hard",
+        "complex"
+      ],
+      "default": "medium"
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "frontend",
+        "backend",
+        "fullstack",
+        "devops",
+        "design",
+        "qa",
+        "data",
+        "management",
+        "marketing",
+        "hr",
+        "finance",
+        "other"
+      ]
+    },
+    "assignee_email": {
+      "type": "string"
+    },
+    "reviewer_email": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "estimated_hours": {
+      "type": "number"
+    },
+    "actual_hours": {
+      "type": "number"
+    },
+    "progress": {
+      "type": "number",
+      "default": 0
+    },
+    "dependency_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tasks that must be completed first"
+    },
+    "blocked_by_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "milestone_id": {
+      "type": "string"
+    },
+    "ai_assignment": {
+      "type": "object",
+      "properties": {
+        "suggested_assignee": {
+          "type": "string"
+        },
+        "confidence_score": {
+          "type": "number"
+        },
+        "reasoning": {
+          "type": "string"
+        },
+        "alternative_assignees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ai_schedule": {
+      "type": "object",
+      "properties": {
+        "suggested_start": {
+          "type": "string"
+        },
+        "suggested_end": {
+          "type": "string"
+        },
+        "delay_risk": {
+          "type": "number"
+        },
+        "risk_factors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "quality_score": {
+      "type": "number",
+      "description": "Quality rating 0-100"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "project_id",
+    "title"
+  ]
+}

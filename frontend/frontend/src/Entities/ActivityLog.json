@@ -1,0 +1,77 @@
+{
+  "name": "ActivityLog",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string"
+    },
+    "workspace_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "actor_email": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "created",
+        "updated",
+        "deleted",
+        "assigned",
+        "unassigned",
+        "status_changed",
+        "commented",
+        "mentioned",
+        "completed",
+        "reopened",
+        "ai_suggestion",
+        "ai_assignment"
+      ]
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": [
+        "project",
+        "task",
+        "comment",
+        "member",
+        "workspace"
+      ]
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "old_value": {
+          "type": "string"
+        },
+        "new_value": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "is_ai_generated": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "actor_email",
+    "action",
+    "entity_type"
+  ]
+}

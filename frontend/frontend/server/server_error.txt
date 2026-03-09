@@ -1,0 +1,736 @@
+﻿2026-02-23 10:50:00 [[32minfo[39m]: --- TaskPilot Backend: Startup [Mode: development] ---
+2026-02-23 10:50:00 [[32minfo[39m]: Γ£ö MongoDB Connected: undefined
+2026-02-23 10:50:00 [[32minfo[39m]: Γ£ö Database connection established
+2026-02-23 10:50:01 [[33mwarn[39m]: ΓÜá Email system starting in DEGRADED mode (missing: SMTP_USER, SMTP_PASS)
+2026-02-23 10:50:01 [[32minfo[39m]: BullMQ Workers initialized
+2026-02-23 10:50:01 [[32minfo[39m]: --- Seeding Data ---
+2026-02-23 10:50:01 [[31merror[39m]: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+node : Error: 
+connect ECONNREFUSED 
+127.0.0.1:6379
+At line:1 char:1
++ node server.js 
+2>&1 | Out-File 
+-FilePath 
+"C:\Users\SAMRAAJ M 
+M\Deskto ...
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Error:    
+ connect ... 127.    
+0.0.1:6379:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[32minfo[39m]: Γ£ö MongoDB Connected: localhost
+2026-02-23 10:50:01 [[32minfo[39m]: Γ£ö Seeding completed successfully
+2026-02-23 10:50:01 [[32minfo[39m]: --- Data Seeding Completed ---
+2026-02-23 10:50:01 [[32minfo[39m]: BullMQ Workers initialized
+2026-02-23 10:50:01 [[32minfo[39m]: Γ£ö Workers initialized lazily
+2026-02-23 10:50:01 [[31merror[39m]: Γ£û Critical system error detected (uncaughtException): listen EADDRINUSE: address already in use :::5001
+2026-02-23 10:50:01 [[31merror[39m]: Error: listen EADDRINUSE: address already in use :::5001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\SAMRAAJ M M\Desktop\taskpilot\frontend\server\server.js:239:20
+    at new Promise (<anonymous>)
+    at startServer (C:\Users\SAMRAAJ M M\Desktop\taskpilot\frontend\server\server.js:238:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:01 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:02 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[33mwarn[39m]: --- ΓÜá Background Services partially started (Redis degraded/missing) ---
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:03 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:04 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:04 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: AI Worker Error:
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:05 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:05 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Redis connection error: connect ECONNREFUSED 127.0.0.1:6379
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+Error: connect 
+ECONNREFUSED 
+127.0.0.1:6379
+    at TCPConnectWrap
+.afterConnect [as 
+oncomplete] 
+(node:net:1637:16) {
+  errno: -4078,
+  code: 
+'ECONNREFUSED',
+  syscall: 'connect',
+  address: 
+'127.0.0.1',
+  port: 6379
+}
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Γ£û Critical system error detected (unhandledRejection):
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: Overdue Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: Analytics Worker Error:
+2026-02-23 10:50:06 [[33mwarn[39m]: Redis reconnection attempts exhausted. Background queues may be unavailable.
+2026-02-23 10:50:06 [[31merror[39m]: AI Worker Error:

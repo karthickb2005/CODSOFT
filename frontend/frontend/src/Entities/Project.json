@@ -1,0 +1,161 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "workspace_id": {
+      "type": "string",
+      "description": "Parent workspace ID"
+    },
+    "organization_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "active",
+        "on_hold",
+        "completed",
+        "cancelled"
+      ],
+      "default": "planning"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "it",
+        "core_engineering",
+        "business",
+        "marketing",
+        "hr",
+        "finance",
+        "operations",
+        "custom"
+      ]
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "target_end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "actual_end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "progress": {
+      "type": "number",
+      "default": 0,
+      "description": "Progress percentage 0-100"
+    },
+    "budget": {
+      "type": "number"
+    },
+    "spent_budget": {
+      "type": "number",
+      "default": 0
+    },
+    "leader_email": {
+      "type": "string",
+      "description": "Project manager email"
+    },
+    "member_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "target_date": {
+            "type": "string"
+          },
+          "completed": {
+            "type": "boolean"
+          },
+          "completed_date": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risk_score": {
+      "type": "number",
+      "description": "AI-calculated risk score 0-100"
+    },
+    "health_status": {
+      "type": "string",
+      "enum": [
+        "excellent",
+        "good",
+        "at_risk",
+        "critical"
+      ],
+      "default": "good"
+    },
+    "ai_insights": {
+      "type": "object",
+      "properties": {
+        "delay_probability": {
+          "type": "number"
+        },
+        "bottlenecks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "last_analyzed": {
+          "type": "string"
+        }
+      }
+    },
+    "is_archived": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "workspace_id",
+    "name"
+  ]
+}
