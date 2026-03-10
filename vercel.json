@@ -9,14 +9,14 @@
             }
         },
         {
-            "src": "frontend/frontend/server/server.js",
+            "src": "api/index.js",
             "use": "@vercel/node"
         }
     ],
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "/frontend/frontend/server/server.js"
+            "destination": "/api/index.js"
         },
         {
             "source": "/(.*)",
