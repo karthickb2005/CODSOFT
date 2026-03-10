@@ -1,28 +1,68 @@
 /**
  * Vercel Serverless API Entry Point
- * 
- * This file acts as the bridge between Vercel's serverless environment
- * and the Express backend located in frontend/frontend/server/.
- * 
- * We resolve module paths explicitly to ensure Vercel can find and
- * install backend dependencies from the nested package.json.
  */
 const path = require('path');
 
-// Point Node.js module resolution to the backend's own node_modules
-const serverDir = path.join(__dirname, '..', 'frontend', 'frontend', 'server');
-const originalPaths = module.paths;
-module.paths = [path.join(serverDir, 'node_modules'), ...originalPaths];
+console.log("--- VERCEL API BOOT ---");
+console.log("Current Directory:", process.cwd());
+console.log("Filename:", __filename);
+console.log("Dirname:", __dirname);
 
-// Load environment variables from the server's .env (only for local dev - Vercel uses its own env vars)
+// Vercel Environment Variables Check
+console.log("MONGO_URI defined:", !!process.env.MONGO_URI);
+console.log("JWT_SECRET defined:", !!process.env.JWT_SECRET);
+
+// Path to the server directory
+const serverDir = path.resolve(__dirname, '../frontend/frontend/server');
+console.log("Resolved Server Dir:", serverDir);
+
+// Check if directory exists
+const fs = require('fs');
+if (fs.existsSync(serverDir)) {
+    console.log("Server directory exists ✅");
+    const serverFile = path.join(serverDir, 'server.js');
+    if (fs.existsSync(serverFile)) {
+        console.log("server.js found ✅");
+    } else {
+        console.error("server.js NOT FOUND ❌");
+    }
+} else {
+    console.error("Server directory NOT FOUND ❌");
+}
+
+// Ensure working directory is set to server directory for relative paths
 try {
-    require('dotenv').config({ path: path.join(serverDir, '.env') });
-} catch (e) { }
+    process.chdir(serverDir);
+    console.log("New Working Directory:", process.cwd());
+} catch (err) {
+    console.error("Failed to change directory:", err.message);
+}
 
-// Change working directory so relative paths inside server.js resolve correctly
-process.chdir(serverDir);
+// Load the app
+// Note: We use the absolute path to make it easier for the bundler to follow
+let app;
+try {
+    app = require('../frontend/frontend/server/server.js');
+    console.log("Express App loaded successfully ✅");
+} catch (err) {
+    console.error("FAILED to load Express App ❌");
+    console.error("Error Message:", err.message);
+    console.error("Stack:", err.stack);
 
-// Load and export the Express app from the backend
-const app = require(path.join(serverDir, 'server.js'));
+    // Provide a fallback app that returns the error
+    const express = require('express');
+    app = express();
+    app.all('*', (req, res) => {
+        res.status(500).json({
+            success: false,
+            message: "Failed to load backend server",
+            error: err.message,
+            stack: err.stack,
+            cwd: process.cwd(),
+            dirname: __dirname,
+            serverDir: serverDir
+        });
+    });
+}
 
 module.exports = app;
