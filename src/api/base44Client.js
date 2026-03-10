@@ -48,7 +48,7 @@ api.interceptors.response.use(
         if (error.response?.status === 401 && !originalRequest._retry) {
             originalRequest._retry = true;
             try {
-                const response = await axios.post(`${API_BASE_URL}/api/auth/refresh`, {}, { withCredentials: true });
+                const response = await api.post(`/api/auth/refresh`, {});
                 // Backend: { success: true, data: { token: "..." } }
                 const { token } = response.data?.data || response.data;
                 localStorage.setItem('accessToken', token);
@@ -112,11 +112,11 @@ const base44 = {
         User: {
             ...createEntityService('users'),
             login: (data) => {
-                console.log("AUTH CALL:", `${API_BASE_URL}/api/auth/login`);
-                return axios.post(`${API_BASE_URL}/api/auth/login`, data);
+                console.log("AUTH CALL:", `/api/auth/login`);
+                return api.post(`/api/auth/login`, data);
             },
-            signup: (data) => axios.post(`${API_BASE_URL}/api/users/register`, data),
-            refresh: () => axios.post(`${API_BASE_URL}/api/auth/refresh`, {}, { withCredentials: true })
+            signup: (data) => api.post(`/api/users/register`, data),
+            refresh: () => api.post(`/api/auth/refresh`, {})
         },
         TeamMember: createEntityService('team'),
         Workspace: {
