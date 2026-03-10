@@ -12,8 +12,8 @@ export const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (token) {
-            // Ensure we connect to the backend port (5001) not frontend (5173)
-            const socketUrl = "http://localhost:5001";
+            // Ensure we connect to the backend
+            const socketUrl = "https://taskpilot1-api.onrender.com";
             console.log('Connecting to socket server at:', socketUrl);
 
             const socketInstance = io(socketUrl, {
