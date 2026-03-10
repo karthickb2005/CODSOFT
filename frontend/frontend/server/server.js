@@ -52,8 +52,10 @@ if (missingEnv.length > 0) {
     }
 }
 
-// Warm up DB connection
-connectDB();
+// Warm up DB connection (non-fatal on Vercel)
+connectDB().catch(err => {
+    logger.error(`⚠ Module-level DB connection failed: ${err.message}. Requests will fail until DB is available.`);
+});
 
 const jwtSecret = process.env.JWT_SECRET;
 if (!jwtSecret && isProduction) {
