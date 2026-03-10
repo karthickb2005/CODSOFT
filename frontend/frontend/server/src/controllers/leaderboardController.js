@@ -1,22 +1,22 @@
-import Task from "../models/Task.js"
-import ChatMessage from "../models/ChatMessage.js"
-import User from "../models/User.js"
+const Task = require("../models/Task");
+const ChatMessage = require("../models/ChatMessage");
+const User = require("../models/User");
 
-export const getProjectLeaderboard = async (req, res) => {
+const getProjectLeaderboard = async (req, res) => {
     try {
-        const { projectId } = req.params
+        const { projectId } = req.params;
 
         // Fetch tasks
-        const tasks = await Task.find({ project_id: projectId })
+        const tasks = await Task.find({ project_id: projectId });
 
         // Fetch messages
-        const messages = await ChatMessage.find({ projectId }).populate("sender")
+        const messages = await ChatMessage.find({ projectId }).populate("sender");
 
-        const scores = {}
+        const scores = {};
 
         // Task scoring
         tasks.forEach(task => {
-            if (!task.assignee_email) return
+            if (!task.assignee_email) return;
 
             if (!scores[task.assignee_email]) {
                 scores[task.assignee_email] = {
@@ -25,23 +25,22 @@ export const getProjectLeaderboard = async (req, res) => {
                     highPriorityTasks: 0,
                     messages: 0,
                     score: 0
-                }
+                };
             }
 
             if (task.status === "done") {
-                scores[task.assignee_email].completedTasks += 1
+                scores[task.assignee_email].completedTasks += 1;
             }
 
             if (task.priority === "high" || task.priority === "urgent") {
-                scores[task.assignee_email].highPriorityTasks += 1
+                scores[task.assignee_email].highPriorityTasks += 1;
             }
-        })
+        });
 
         // Chat scoring
         messages.forEach(msg => {
-            const email = msg.sender?.email
-
-            if (!email) return
+            const email = msg.sender?.email;
+            if (!email) return;
 
             if (!scores[email]) {
                 scores[email] = {
@@ -50,33 +49,27 @@ export const getProjectLeaderboard = async (req, res) => {
                     highPriorityTasks: 0,
                     messages: 0,
                     score: 0
-                }
+                };
             }
-
-            scores[email].messages += 1
-        })
+            scores[email].messages += 1;
+        });
 
         // Calculate final score
         Object.values(scores).forEach(user => {
             user.score =
                 user.completedTasks * 5 +
                 user.highPriorityTasks * 3 +
-                user.messages * 1
-        })
+                user.messages * 1;
+        });
 
-        // Convert to leaderboard
-        const leaderboard = Object.values(scores)
-            .sort((a, b) => b.score - a.score)
+        const leaderboard = Object.values(scores).sort((a, b) => b.score - a.score);
 
-        res.json({
-            success: true,
-            leaderboard
-        })
+        res.json({ success: true, leaderboard });
 
     } catch (error) {
-        console.error("Leaderboard error:", error)
-        res.status(500).json({
-            error: "Failed to generate leaderboard"
-        })
+        console.error("Leaderboard error:", error);
+        res.status(500).json({ error: "Failed to generate leaderboard" });
     }
-}
+};
+
+module.exports = { getProjectLeaderboard };

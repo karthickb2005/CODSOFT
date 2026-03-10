@@ -1,8 +1,8 @@
-import express from "express"
-import { getProjectLeaderboard } from "../controllers/leaderboardController.js"
+const express = require("express");
+const { getProjectLeaderboard } = require("../controllers/leaderboardController");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get("/:projectId", getProjectLeaderboard)
+router.get("/:projectId", getProjectLeaderboard);
 
-export default router
+module.exports = router;
