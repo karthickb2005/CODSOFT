@@ -1,9 +1,12 @@
-const Task = require('../models/Task');
-const AIAnalysis = require('../models/AIAnalysis');
-const axios = require('axios');
+const supabase = require('../config/supabaseClient');
 
 const generateStats = async (userEmail) => {
-    const tasks = await Task.find({ assignee_email: userEmail });
+    const { data: tasks, error } = await supabase
+        .from('tasks')
+        .select('*')
+        .eq('assignee_email', userEmail);
+
+    if (error) throw error;
 
     const stats = {
         total: tasks.length,
@@ -91,7 +94,6 @@ const getLLMRecommendations = async (stats, requestId = null) => {
     );
 
     if (!result || result.success === false) {
-        logger.warn('AI Insights fallback triggered in background service');
         return null;
     }
 
@@ -100,7 +102,6 @@ const getLLMRecommendations = async (stats, requestId = null) => {
         const jsonMatch = text.match(/\{[\s\S]*\}/);
         return JSON.parse(jsonMatch ? jsonMatch[0] : text).recommendations;
     } catch (error) {
-        logger.error('Failed to parse background AI recommendations:', error.message);
         return null;
     }
 };

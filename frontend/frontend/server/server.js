@@ -4,7 +4,6 @@ console.log("ENV LOADED:", !!process.env.SMTP_USER);
 const isProduction = process.env.NODE_ENV === 'production';
 const path = require('path');
 const http = require('http');
-const mongoose = require('mongoose');
 
 console.log("DISABLE_EMAIL VALUE:", process.env.DISABLE_EMAIL);
 console.log("JWT_SECRET loaded:", !!process.env.JWT_SECRET);
@@ -33,15 +32,13 @@ const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 const cookieParser = require('cookie-parser');
 const { errorHandler } = require('./src/middleware/errorMiddleware');
-const { connectDB, closeDB } = require('./src/config/db');
 const { observabilityMiddleware } = require('./src/middleware/observabilityMiddleware');
-const seedData = require('./src/config/seed');
 const { initIO } = require('./src/socket');
 
 const port = process.env.PORT || 5001;
 
 // --- Environment Validation ---
-const requiredEnv = ['JWT_SECRET', 'MONGO_URI'];
+const requiredEnv = ['JWT_SECRET', 'SUPABASE_URL', 'SUPABASE_ANON_KEY'];
 const missingEnv = requiredEnv.filter(key => !process.env[key]);
 
 if (missingEnv.length > 0) {
@@ -52,10 +49,7 @@ if (missingEnv.length > 0) {
     }
 }
 
-// Warm up DB connection (non-fatal on Vercel)
-connectDB().catch(err => {
-    logger.error(`⚠ Module-level DB connection failed: ${err.message}. Requests will fail until DB is available.`);
-});
+// Supabase client is initialized on demand via src/config/supabaseClient
 
 const jwtSecret = process.env.JWT_SECRET;
 if (!jwtSecret && isProduction) {
@@ -156,15 +150,11 @@ app.use('/api/leaderboard', require('./src/routes/leaderboardRoutes').default ||
 // Error Handler
 app.use(errorHandler);
 
-// =============================================
 // SERVER LISTEN (only in non-Vercel environments)
 // =============================================
 const startServer = async () => {
     try {
         logger.info(`--- TaskPilot Backend: Startup [Mode: ${process.env.NODE_ENV || 'development'}] ---`);
-
-        await connectDB();
-        logger.info('✔ Database connection established');
 
         // Email System Validation
         const { validateSMTPConfig } = require('./src/utils/emailService');
@@ -206,15 +196,6 @@ const startServer = async () => {
             logger.warn('--- ⚠ Background Services failed — API-ONLY mode ---', { error: queueError.message });
         }
 
-        // Seed in dev
-        if (!isProduction) {
-            try {
-                await seedData();
-                logger.info('--- Data Seeding Completed ---');
-            } catch (seedError) {
-                logger.error(`--- ⚠ Data Seeding Failed: ${seedError.message} ---`);
-            }
-        }
 
         // Graceful Shutdown
         const gracefulShutdown = async (signal) => {
@@ -224,7 +205,6 @@ const startServer = async () => {
                     const redis = require('./src/config/redis');
                     if (redis && redis.quit) await redis.quit();
                 } catch (err) { }
-                await closeDB();
                 process.exit(0);
             });
             setTimeout(() => process.exit(1), 10000);

@@ -1,7 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const crypto = require('crypto');
-const TeamMember = require('../models/TeamMember');
-const Invite = require('../models/Invite');
+const supabase = require('../config/supabaseClient');
 const { sendInvitationEmail } = require('../utils/mailer');
 
 // @desc    Get all team members
@@ -10,55 +9,74 @@ const { sendInvitationEmail } = require('../utils/mailer');
 const getTeamMembers = asyncHandler(async (req, res) => {
     const { orderBy, limit, ...filters } = req.query;
 
-    let query = TeamMember.find(filters);
+    let query = supabase.from('team_members').select('*');
+
+    // Apply filters
+    Object.keys(filters).forEach(key => {
+        query = query.eq(key, filters[key]);
+    });
 
     if (orderBy) {
-        // Convert entity orderBy (e.g. '-created_date') to Mongoose sort (e.g. '-createdAt')
-        const sortField = orderBy.replace('created_date', 'createdAt');
-        query = query.sort(sortField);
+        const isDescending = orderBy.startsWith('-');
+        const field = isDescending ? orderBy.substring(1) : orderBy;
+        const sortField = field === 'created_date' ? 'created_at' : field;
+        query = query.order(sortField, { ascending: !isDescending });
     }
 
     if (limit) {
         query = query.limit(parseInt(limit));
     }
 
-    const members = await query.exec();
+    const { data: members, error } = await query;
+
+    if (error) {
+        res.status(500);
+        throw new Error(`Supabase Error: ${error.message}`);
+    }
+
     res.status(200).json({ success: true, data: members });
 });
 
-// @desc    Create new team member profile
+// @desc    Create new team member profile or invitation
 // @route   POST /api/team
 // @access  Public
 const createTeamMember = asyncHandler(async (req, res) => {
-    console.log("🟢 Create Member API HIT", req.body);
-
-    // Support both the Invite flow and the Profile flow
-    // If it's a full profile submission
+    // 1. Full Profile flow
     if (req.body.display_name || req.body.job_title) {
         const { user_email, display_name, job_title, department, role, skills, domains, availability, max_concurrent_tasks } = req.body;
 
-        const memberExists = await TeamMember.findOne({ user_email });
+        const { data: memberExists } = await supabase
+            .from('team_members')
+            .select('id')
+            .eq('user_email', user_email)
+            .single();
 
         if (memberExists) {
             res.status(400);
             throw new Error('Team member already exists');
         }
 
-        const member = await TeamMember.create({
-            user_email,
-            display_name,
-            job_title,
-            department,
-            role: role || 'member',
-            skills: skills || [],
-            domains: domains || [],
-            availability: availability || { hours_per_week: 40 },
-            max_concurrent_tasks: max_concurrent_tasks || 5,
-            organization_id: 'default',
-            is_active: true,
-            current_workload: 0,
-            burnout_risk: 'low'
-        });
+        const { data: member, error } = await supabase
+            .from('team_members')
+            .insert([{
+                user_email,
+                display_name,
+                job_title,
+                department,
+                role: role || 'member',
+                skills: skills || [],
+                domains: domains || [],
+                availability: availability || { hours_per_week: 40 },
+                max_concurrent_tasks: max_concurrent_tasks || 5,
+                organization_id: 'default',
+                is_active: true,
+                current_workload: 0,
+                burnout_risk: 'low'
+            }])
+            .select()
+            .single();
+
+        if (error) throw error;
 
         return res.status(201).json({
             success: true,
@@ -67,85 +85,84 @@ const createTeamMember = asyncHandler(async (req, res) => {
         });
     }
 
-    // Original Invite Code
+    // 2. Invitation flow
     const { user_email, role, organization_id } = req.body;
-    console.log("📧 Email received for invite:", user_email);
-    console.log("👤 Role received for invite:", role);
 
-    const memberExists = await TeamMember.findOne({ user_email });
+    const { data: memberExists } = await supabase
+        .from('team_members')
+        .select('id')
+        .eq('user_email', user_email)
+        .single();
 
     if (memberExists) {
         res.status(400);
         throw new Error('Team member already exists');
     }
 
-    // Generate unique invite token
     const inviteToken = crypto.randomBytes(32).toString("hex");
     const expiryTime = new Date();
     expiryTime.setHours(expiryTime.getHours() + 24);
 
-    // Store invite in database
-    const invite = await Invite.create({
-        inviteToken,
-        email: user_email,
-        role: role || 'member',
-        workspaceId: organization_id || 'default',
-        expiryTime,
-    });
+    const { data: invite, error: inviteError } = await supabase
+        .from('invites')
+        .insert([{
+            invite_token: inviteToken,
+            email: user_email,
+            role: role || 'member',
+            workspace_id: organization_id || 'default',
+            expiry_time: expiryTime.toISOString(),
+        }])
+        .select()
+        .single();
 
-    if (invite) {
-        // Send professional HTML invitation email
-        try {
-            console.log("📧 Attempting to send invite to:", user_email);
-            await sendInvitationEmail(user_email, role || 'member', inviteToken);
-            console.log("✅ Invitation email sent");
-        } catch (emailError) {
-            console.error('Email failed but invite stored:', emailError.message);
-        }
+    if (inviteError) throw inviteError;
 
-        res.status(201).json({
-            success: true,
-            message: 'Invitation sent successfully',
-            data: { email: user_email, role: role || 'member' }
-        });
-    } else {
-        res.status(400);
-        throw new Error('Failed to generate invitation');
+    // Send email
+    try {
+        await sendInvitationEmail(user_email, role || 'member', inviteToken);
+    } catch (emailError) {
+        console.error('Email failed but invite stored:', emailError.message);
     }
+
+    res.status(201).json({
+        success: true,
+        message: 'Invitation sent successfully',
+        data: { email: user_email, role: role || 'member' }
+    });
 });
 
 // @desc    Update team member profile
 // @route   PUT /api/team/:id
 // @access  Public
 const updateTeamMember = asyncHandler(async (req, res) => {
-    const member = await TeamMember.findById(req.params.id);
+    const { data: member, error } = await supabase
+        .from('team_members')
+        .update(req.body)
+        .eq('id', req.params.id)
+        .select()
+        .single();
 
-    if (!member) {
+    if (error || !member) {
         res.status(404);
         throw new Error('Team member not found');
     }
 
-    const updatedMember = await TeamMember.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        { new: true, runValidators: true }
-    );
-
-    res.status(200).json({ success: true, data: updatedMember });
+    res.status(200).json({ success: true, data: member });
 });
 
 // @desc    Delete team member
 // @route   DELETE /api/team/:id
 // @access  Public
 const deleteTeamMember = asyncHandler(async (req, res) => {
-    const member = await TeamMember.findById(req.params.id);
+    const { error } = await supabase
+        .from('team_members')
+        .delete()
+        .eq('id', req.params.id);
 
-    if (!member) {
+    if (error) {
         res.status(404);
-        throw new Error('Team member not found');
+        throw new Error('Team member not found or deletion failed');
     }
-
-    await member.deleteOne();
 
     res.status(200).json({ success: true, data: { id: req.params.id } });
 });

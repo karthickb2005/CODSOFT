@@ -1,4 +1,4 @@
-const AuditLog = require('../models/AuditLog');
+const supabase = require('../config/supabaseClient');
 
 /**
  * Record an audit log entry
@@ -23,16 +23,20 @@ const logAction = async ({
     userAgent
 }) => {
     try {
-        await AuditLog.create({
-            actor: userId,
-            actor_email: userEmail,
-            action,
-            entity_type: entityType,
-            entity_id: entityId,
-            metadata,
-            ip_address: ipAddress,
-            user_agent: userAgent
-        });
+        const { error } = await supabase
+            .from('audit_logs')
+            .insert([{
+                actor_id: userId,
+                actor_email: userEmail,
+                action,
+                entity_type: entityType,
+                entity_id: String(entityId),
+                metadata,
+                ip_address: ipAddress,
+                user_agent: userAgent
+            }]);
+
+        if (error) throw error;
     } catch (error) {
         console.error('Failed to create audit log:', error.message);
         // We don't throw here to avoid blocking the main core flow

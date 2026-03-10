@@ -1,5 +1,5 @@
 const cron = require('node-cron');
-const Task = require('../models/Task');
+const supabase = require('../config/supabaseClient');
 const { getIO } = require('../socket');
 
 /**
@@ -8,20 +8,22 @@ const { getIO } = require('../socket');
 const initJobs = () => {
     // 1. Scan for overdue tasks every hour
     cron.schedule('0 * * * *', async () => {
-        // logger.info('[Background Job] Running overdue task scan...');
         try {
-            const overdueTasks = await Task.find({
-                status: { $ne: 'done' },
-                due_date: { $lt: new Date() }
-            });
+            const { data: overdueTasks, error } = await supabase
+                .from('tasks')
+                .select('*')
+                .neq('status', 'done')
+                .lt('due_date', new Date().toISOString());
 
-            if (overdueTasks.length > 0) {
-                logger.info(`[Background Job] Found ${overdueTasks.length} overdue tasks.`);
+            if (error) throw error;
+
+            if (overdueTasks && overdueTasks.length > 0) {
+                console.log(`[Background Job] Found ${overdueTasks.length} overdue tasks.`);
 
                 overdueTasks.forEach(task => {
                     // Notify assignee via socket if online
                     getIO().emit('taskOverdue', {
-                        taskId: task._id,
+                        taskId: task.id,
                         taskTitle: task.title,
                         triggeringUser: 'System',
                         affectedUser: task.assignee_email,
@@ -31,11 +33,11 @@ const initJobs = () => {
                 });
             }
         } catch (error) {
-            logger.error(`[Background Job] Overdue scan failed: ${error.message}`);
+            console.error(`[Background Job] Overdue scan failed: ${error.message}`);
         }
     });
 
-    logger.info('[Background Job] Periodic tasks initialized.');
+    console.log('[Background Job] Periodic tasks initialized.');
 };
 
 module.exports = {

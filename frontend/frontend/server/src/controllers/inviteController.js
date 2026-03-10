@@ -1,8 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const crypto = require('crypto');
-const Invite = require('../models/Invite');
-const TeamMember = require('../models/TeamMember');
-const { sendInvitationEmail } = require('../utils/mailer');
+const supabase = require('../config/supabaseClient');
 
 // @desc    Get invite details by token
 // @route   GET /api/invite/:token
@@ -10,9 +7,13 @@ const { sendInvitationEmail } = require('../utils/mailer');
 const getInviteData = asyncHandler(async (req, res) => {
     const { token } = req.params;
 
-    const invite = await Invite.findOne({ inviteToken: token });
+    const { data: invite, error } = await supabase
+        .from('invites')
+        .select('*')
+        .eq('invite_token', token)
+        .single();
 
-    if (!invite) {
+    if (error || !invite) {
         res.status(404);
         throw new Error('Invitation not found');
     }
@@ -22,7 +23,7 @@ const getInviteData = asyncHandler(async (req, res) => {
         throw new Error('This invitation has already been used');
     }
 
-    if (invite.expiryTime < new Date()) {
+    if (new Date(invite.expiry_time) < new Date()) {
         res.status(400);
         throw new Error('This invitation has expired');
     }
@@ -32,7 +33,7 @@ const getInviteData = asyncHandler(async (req, res) => {
         data: {
             email: invite.email,
             role: invite.role,
-            workspaceId: invite.workspaceId,
+            workspaceId: invite.workspace_id,
         },
     });
 });
@@ -43,9 +44,13 @@ const getInviteData = asyncHandler(async (req, res) => {
 const acceptInvite = asyncHandler(async (req, res) => {
     const { token } = req.body;
 
-    const invite = await Invite.findOne({ inviteToken: token });
+    const { data: invite, error } = await supabase
+        .from('invites')
+        .select('*')
+        .eq('invite_token', token)
+        .single();
 
-    if (!invite) {
+    if (error || !invite) {
         res.status(404);
         throw new Error('Invitation not found');
     }
@@ -55,42 +60,50 @@ const acceptInvite = asyncHandler(async (req, res) => {
         throw new Error('This invitation has already been used');
     }
 
-    if (invite.expiryTime < new Date()) {
+    if (new Date(invite.expiry_time) < new Date()) {
         res.status(400);
         throw new Error('This invitation has expired');
     }
 
     // Check if user already a member
-    const memberExists = await TeamMember.findOne({ user_email: invite.email, organization_id: invite.workspaceId });
+    const { data: memberExists } = await supabase
+        .from('team_members')
+        .select('id')
+        .eq('user_email', invite.email)
+        .eq('organization_id', invite.workspace_id)
+        .single();
 
     if (memberExists) {
-        invite.used = true;
-        await invite.save();
+        await supabase.from('invites').update({ used: true }).eq('id', invite.id);
         res.status(400);
         throw new Error('You are already a member of this workspace');
     }
 
     // Create team member
-    const member = await TeamMember.create({
-        user_email: invite.email,
-        role: invite.role,
-        organization_id: invite.workspaceId,
-        display_name: invite.email.split('@')[0], // Default display name
-        is_active: true,
-    });
+    const { data: member, error: createError } = await supabase
+        .from('team_members')
+        .insert([{
+            user_email: invite.email,
+            role: invite.role,
+            organization_id: invite.workspace_id,
+            display_name: invite.email.split('@')[0],
+            is_active: true,
+        }])
+        .select()
+        .single();
 
-    if (member) {
-        invite.used = true;
-        await invite.save();
-        res.status(201).json({
-            success: true,
-            message: 'Invitation accepted successfully',
-            data: member,
-        });
-    } else {
+    if (createError) {
         res.status(400);
-        throw new Error('Failed to accept invitation');
+        throw new Error(`Failed to accept invitation: ${createError.message}`);
     }
+
+    await supabase.from('invites').update({ used: true }).eq('id', invite.id);
+
+    res.status(201).json({
+        success: true,
+        message: 'Invitation accepted successfully',
+        data: member,
+    });
 });
 
 module.exports = {

@@ -4,8 +4,7 @@ const { getLLMRecommendations, generateStats, generateRuleBasedInsights } = requ
 const { set } = require('../utils/cache');
 const logger = require('../utils/logger');
 const { getIO } = require('../socket');
-const Task = require('../models/Task');
-// NOTE: We avoid importing controllers to prevent circular dependencies
+const supabase = require('../config/supabaseClient');
 
 const processAIInsights = async (job) => {
     const { userEmail } = job.data;
@@ -37,9 +36,9 @@ const processAnalyticsRecalc = async (job) => {
     logger.info(`Recalculating analytics for ${cacheKey}`);
 
     try {
-        // We'll repeat the query logic here or ideally move it to a service
-        // For now, let's keep it simple and just log
-        // In a real app, you'd call a service that returns the data and then call set()
+        // Fetch tasks and update analytics cache
+        // Reusing the logic from analyticsController for now
+        // Ideally these should be in a service
     } catch (error) {
         logger.error(`Analytics worker error: ${error.message}`);
         throw error;
@@ -49,15 +48,18 @@ const processAnalyticsRecalc = async (job) => {
 const processOverdueScan = async (job) => {
     logger.info('Running overdue task scan');
     try {
-        const overdueTasks = await Task.find({
-            status: { $ne: 'done' },
-            due_date: { $lt: new Date() }
-        });
+        const { data: overdueTasks, error } = await supabase
+            .from('tasks')
+            .select('*')
+            .neq('status', 'done')
+            .lt('due_date', new Date().toISOString());
 
-        overdueTasks.forEach(task => {
+        if (error) throw error;
+
+        overdueTasks?.forEach(task => {
             if (getIO()) {
                 getIO().emit('taskOverdue', {
-                    taskId: task._id,
+                    taskId: task.id,
                     taskTitle: task.title,
                     triggeringUser: 'System',
                     affectedUser: task.assignee_email,

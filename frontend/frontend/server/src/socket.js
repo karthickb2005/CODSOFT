@@ -1,6 +1,6 @@
 const { Server } = require('socket.io');
 const jwt = require('jsonwebtoken');
-const User = require('./models/User');
+const supabase = require('./config/supabaseClient');
 const logger = require('./utils/logger');
 
 let io;
@@ -23,9 +23,14 @@ const initIO = (server) => {
 
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            const user = await User.findById(decoded.id).select('-password');
 
-            if (!user) {
+            const { data: user, error } = await supabase
+                .from('users')
+                .select('id, name, email, role')
+                .eq('id', decoded.id)
+                .single();
+
+            if (error || !user) {
                 return next(new Error('Authentication error: User not found'));
             }
 
@@ -40,7 +45,6 @@ const initIO = (server) => {
     io.on('connection', (socket) => {
         logger.info(`⚡ Socket connected: ${socket.id} (User: ${socket.user.email})`);
 
-        // Join AI Ops room for real-time monitoring
         socket.on('join-ai-ops', () => {
             socket.join('ai-ops');
             logger.info(`🧭 User ${socket.user.email} joined AI-OPS live stream`);
@@ -49,17 +53,19 @@ const initIO = (server) => {
         // Join Project Chat Room
         socket.on('joinProject', async ({ projectId }) => {
             try {
-                const Project = require('./models/Project');
-                const project = await Project.findById(projectId);
+                const { data: project, error } = await supabase
+                    .from('projects')
+                    .select('*')
+                    .eq('id', projectId)
+                    .single();
 
-                if (!project) {
+                if (error || !project) {
                     logger.warn(`⚠ JoinProject failed: Project ${projectId} not found`);
                     return;
                 }
 
-                // Check if user is owner or member
                 const isOwner = project.owner_email === socket.user.email;
-                const isMember = project.member_emails.includes(socket.user.email);
+                const isMember = project.member_emails?.includes(socket.user.email);
 
                 if (isOwner || isMember) {
                     socket.join(projectId);
@@ -76,19 +82,21 @@ const initIO = (server) => {
         socket.on('sendMessage', async (data) => {
             try {
                 const { projectId, message } = data;
-                const ChatMessage = require('./models/ChatMessage');
 
-                const newMessage = await ChatMessage.create({
-                    projectId,
-                    sender: socket.user._id,
-                    message,
-                });
+                const { data: newMessage, error } = await supabase
+                    .from('chat_messages')
+                    .insert([{
+                        project_id: projectId,
+                        sender_id: socket.user.id,
+                        sender_name: socket.user.name,
+                        message,
+                    }])
+                    .select('*, sender:users(id, name, email)')
+                    .single();
 
-                // Populate sender info for the frontend
-                const populatedMessage = await ChatMessage.findById(newMessage._id)
-                    .populate('sender', 'name email avatar');
+                if (error) throw error;
 
-                io.to(projectId).emit('receiveMessage', populatedMessage);
+                io.to(projectId).emit('receiveMessage', newMessage);
                 logger.info(`📤 Message from ${socket.user.email} in ${projectId}: ${message}`);
             } catch (error) {
                 logger.error(`✖ Socket sendMessage Error: ${error.message}`);

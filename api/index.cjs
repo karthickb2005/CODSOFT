@@ -9,7 +9,8 @@ console.log("Filename:", __filename);
 console.log("Dirname:", __dirname);
 
 // Vercel Environment Variables Check
-console.log("MONGO_URI defined:", !!process.env.MONGO_URI);
+console.log("SUPABASE_URL defined:", !!process.env.SUPABASE_URL);
+console.log("SUPABASE_ANON_KEY defined:", !!process.env.SUPABASE_ANON_KEY);
 console.log("JWT_SECRET defined:", !!process.env.JWT_SECRET);
 
 // Path to the server directory

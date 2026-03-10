@@ -1,9 +1,7 @@
 const asyncHandler = require('express-async-handler');
-const axios = require('axios');
-const AIAnalysis = require('../models/AIAnalysis');
-const { generateStats, generateRuleBasedInsights, getLLMRecommendations } = require('../services/aiInsightsService');
-const { getOrSet, get } = require('../utils/cache');
-const { protect } = require('../middleware/authMiddleware');
+const supabase = require('../config/supabaseClient');
+const { generateStats, generateRuleBasedInsights } = require('../services/aiInsightsService');
+const { get } = require('../utils/cache');
 
 // Initialize Hugging Face
 const HF_API_KEY = process.env.HUGGING_FACE_API_KEY;
@@ -13,14 +11,22 @@ const HF_MODEL = "meta-llama/Llama-3.1-8B-Instruct";
 // @route   GET /api/ai-insights
 // @access  Public
 const getInsights = asyncHandler(async (req, res) => {
-    const { orderBy = '-createdAt', limit = 50 } = req.query;
+    const { orderBy = '-created_at', limit = 50 } = req.query;
 
-    const sortField = orderBy.startsWith('-') ? orderBy.substring(1) : orderBy;
-    const sortOrder = orderBy.startsWith('-') ? -1 : 1;
+    const isDescending = orderBy.startsWith('-');
+    const field = isDescending ? orderBy.substring(1) : orderBy;
+    const sortField = field === 'createdAt' ? 'created_at' : field;
 
-    const insights = await AIAnalysis.find()
-        .sort({ [sortField]: sortOrder })
+    const { data: insights, error } = await supabase
+        .from('ai_insights')
+        .select('*')
+        .order(sortField, { ascending: !isDescending })
         .limit(parseInt(limit));
+
+    if (error) {
+        res.status(500);
+        throw new Error(`Supabase Error: ${error.message}`);
+    }
 
     res.status(200).json({ success: true, data: insights });
 });
@@ -29,7 +35,17 @@ const getInsights = asyncHandler(async (req, res) => {
 // @route   POST /api/ai-insights
 // @access  Public
 const createInsight = asyncHandler(async (req, res) => {
-    const insight = await AIAnalysis.create(req.body);
+    const { data: insight, error } = await supabase
+        .from('ai_insights')
+        .insert([req.body])
+        .select()
+        .single();
+
+    if (error) {
+        res.status(500);
+        throw new Error(`Failed to save insight: ${error.message}`);
+    }
+
     res.status(201).json({ success: true, data: insight });
 });
 
@@ -42,40 +58,11 @@ const invokeLLM = asyncHandler(async (req, res) => {
     if (!HF_API_KEY) {
         return res.status(500).json({
             error: 'HUGGING_FACE_API_KEY is not configured on the server.',
-            recommendation: 'Please add HUGGING_FACE_API_KEY to your server/.env file'
+            recommendation: 'Please add HUGGING_FACE_API_KEY to your env'
         });
     }
 
-    const fullPrompt = `You are an AI insights engine used in a production backend service.
-
-Your task is to analyze the provided input data and generate clear, actionable insights.
-
-STRICT RULES:
-- Return ONLY valid JSON.
-- Do NOT include explanations, markdown, or extra text.
-- Follow the schema exactly.
-- Use concise, professional language.
-
-JSON SCHEMA:
-{
-  "summary": "High-level overview in 1–2 sentences",
-  "key_findings": [
-    "Observation 1",
-    "Observation 2",
-    "Observation 3"
-  ],
-  "risks": [
-    "Identified risk 1",
-    "Identified risk 2"
-  ],
-  "recommendations": [
-    "Actionable recommendation 1",
-    "Actionable recommendation 2"
-  ]
-}
-
-INPUT DATA:
-${typeof inputData === 'string' ? inputData : JSON.stringify(inputData, null, 2)}`;
+    const fullPrompt = `You are an AI insights engine. Analyze the input. Return ONLY valid JSON matching schema: {summary, key_findings:[], risks:[], recommendations:[]}. Input: ${JSON.stringify(inputData)}`;
 
     const { postAIRequest } = require('../utils/aiClient');
 
@@ -116,16 +103,18 @@ ${typeof inputData === 'string' ? inputData : JSON.stringify(inputData, null, 2)
     }
 });
 
-// @desc    Update AI insight (apply/dismiss)
+// @desc    Update AI insight
 // @route   PUT /api/ai-insights/:id
 // @access  Public
 const updateInsight = asyncHandler(async (req, res) => {
-    const insight = await AIAnalysis.findByIdAndUpdate(req.params.id, req.body, {
-        new: true,
-        runValidators: true,
-    });
+    const { data: insight, error } = await supabase
+        .from('ai_insights')
+        .update(req.body)
+        .eq('id', req.params.id)
+        .select()
+        .single();
 
-    if (!insight) {
+    if (error || !insight) {
         res.status(404);
         throw new Error('Insight not found');
     }
@@ -141,30 +130,28 @@ const getDashboardInsights = asyncHandler(async (req, res) => {
     const cacheKey = `ai_dashboard_${userEmail}`;
 
     const cachedData = await get(cacheKey);
+    if (cachedData) return res.status(200).json(cachedData);
 
-    if (cachedData) {
-        return res.status(200).json(cachedData);
-    }
-
-    // Cache miss: Trigger background job
-    const { aiInsightsQueue } = require('../queue/queue');
+    // Placeholder background update attempt
     try {
-        await aiInsightsQueue.add(`ai_insights_${userEmail}`, { userEmail });
+        const { aiInsightsQueue } = require('../queue/queue');
+        if (aiInsightsQueue) {
+            await aiInsightsQueue.add(`ai_insights_${userEmail}`, { userEmail });
+        }
     } catch (queueError) {
-        console.warn('AI insights queue unavailable (Redis down). Skipping background update.');
+        console.warn('AI insights queue unavailable (Expected on Vercel).');
     }
 
-    // Return current stats (fast) + placeholder for insights
     const stats = await generateStats(userEmail);
     const insights = generateRuleBasedInsights(stats);
 
     res.status(202).json({
         success: true,
-        message: 'Insights are being generated in the background',
+        message: 'Insights generation initiated',
         data: {
             stats,
             insights,
-            recommendations: ["Insights are being generated in the background. Please refresh in a few seconds."],
+            recommendations: ["Insights are being updated. Please refresh shortly."],
             isProcessing: true
         }
     });

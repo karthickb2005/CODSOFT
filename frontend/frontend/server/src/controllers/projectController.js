@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const Project = require('../models/Project');
+const supabase = require('../config/supabaseClient');
 const { logAction } = require('../utils/auditLogger');
 
 // @desc    Get all projects
@@ -8,19 +8,34 @@ const { logAction } = require('../utils/auditLogger');
 const getProjects = asyncHandler(async (req, res) => {
     const { orderBy, limit, ...filters } = req.query;
 
-    let query = Project.find(filters).lean();
+    let query = supabase.from('projects').select('*');
+
+    // Apply filters
+    Object.keys(filters).forEach(key => {
+        query = query.eq(key, filters[key]);
+    });
 
     if (orderBy) {
-        // Convert entity orderBy (e.g. '-created_date') to Mongoose sort (e.g. '-createdAt')
-        const sortField = orderBy.replace('created_date', 'createdAt');
-        query = query.sort(sortField);
+        const isDescending = orderBy.startsWith('-');
+        const field = isDescending ? orderBy.substring(1) : orderBy;
+        // Mapping Mongoose sort styles
+        const sortField = field === 'created_date' ? 'created_at' : field;
+        query = query.order(sortField, { ascending: !isDescending });
+    } else {
+        query = query.order('created_at', { ascending: false });
     }
 
     if (limit) {
         query = query.limit(parseInt(limit));
     }
 
-    const projects = await query.exec();
+    const { data: projects, error } = await query;
+
+    if (error) {
+        res.status(500);
+        throw new Error(`Supabase Error: ${error.message}`);
+    }
+
     res.status(200).json({ success: true, data: projects });
 });
 
@@ -28,9 +43,13 @@ const getProjects = asyncHandler(async (req, res) => {
 // @route   GET /api/projects/:id
 // @access  Public
 const getProject = asyncHandler(async (req, res) => {
-    const project = await Project.findById(req.params.id).lean();
+    const { data: project, error } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('id', req.params.id)
+        .single();
 
-    if (!project) {
+    if (error || !project) {
         res.status(404);
         throw new Error('Project not found');
     }
@@ -43,15 +62,12 @@ const getProject = asyncHandler(async (req, res) => {
 // @access  Public
 const createProject = asyncHandler(async (req, res) => {
     try {
-        console.log("Incoming body:", req.body);
-        console.log("Authenticated user:", req.user);
-
         if (!req.body.name) {
             res.status(400);
             throw new Error('Please add a name field');
         }
 
-        const project = await Project.create({
+        const projectData = {
             name: req.body.name,
             description: req.body.description,
             status: req.body.status || 'planning',
@@ -61,30 +77,37 @@ const createProject = asyncHandler(async (req, res) => {
             member_emails: req.body.member_emails || [],
             owner_email: req.user?.email,
             is_archived: false,
-        });
+        };
 
-        // Audit Log
-        try {
-            await logAction({
-                userId: req.user?.id || req.user?._id,
-                userEmail: req.user?.email,
-                action: 'PROJECT_CREATED',
-                entityType: 'Project',
-                entityId: project._id,
-                metadata: { after: project },
-                ipAddress: req.ip
-            });
-        } catch (auditErr) {
-            console.warn("Non-critical audit log failure:", auditErr.message);
+        const { data: project, error } = await supabase
+            .from('projects')
+            .insert([projectData])
+            .select()
+            .single();
+
+        if (error) {
+            console.error("Supabase Create Error:", error.message);
+            res.status(500);
+            throw new Error(`Failed to create project: ${error.message}`);
         }
+
+        // Audit Log (Optimistic)
+        logAction({
+            userId: req.user?.id,
+            userEmail: req.user?.email,
+            action: 'PROJECT_CREATED',
+            entityType: 'Project',
+            entityId: project.id,
+            metadata: { after: project },
+            ipAddress: req.ip
+        }).catch(err => console.error("Audit log failed:", err.message));
 
         res.status(201).json({ success: true, data: project });
     } catch (error) {
         console.error("CREATE PROJECT ERROR:", error);
         return res.status(500).json({
             success: false,
-            message: error.message,
-            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+            message: error.message
         });
     }
 });
@@ -93,31 +116,39 @@ const createProject = asyncHandler(async (req, res) => {
 // @route   PUT /api/projects/:id
 // @access  Public
 const updateProject = asyncHandler(async (req, res) => {
-    const project = await Project.findById(req.params.id);
+    const { data: existingProject } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('id', req.params.id)
+        .single();
 
-    if (!project) {
+    if (!existingProject) {
         res.status(404);
         throw new Error('Project not found');
     }
 
-    const updatedProject = await Project.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {
-            new: true,
-        }
-    );
+    const { data: updatedProject, error } = await supabase
+        .from('projects')
+        .update(req.body)
+        .eq('id', req.params.id)
+        .select()
+        .single();
 
-    // Audit Log
-    await logAction({
-        userId: req.user.id || req.user._id,
-        userEmail: req.user.email,
+    if (error) {
+        res.status(500);
+        throw new Error(`Failed to update project: ${error.message}`);
+    }
+
+    // Audit Log (Optimistic)
+    logAction({
+        userId: req.user?.id,
+        userEmail: req.user?.email,
         action: 'PROJECT_UPDATED',
         entityType: 'Project',
-        entityId: updatedProject._id,
-        metadata: { before: project, after: updatedProject },
+        entityId: updatedProject.id,
+        metadata: { before: existingProject, after: updatedProject },
         ipAddress: req.ip
-    });
+    }).catch(err => console.error("Audit log failed:", err.message));
 
     res.status(200).json({ success: true, data: updatedProject });
 });
@@ -126,25 +157,37 @@ const updateProject = asyncHandler(async (req, res) => {
 // @route   DELETE /api/projects/:id
 // @access  Public
 const deleteProject = asyncHandler(async (req, res) => {
-    const project = await Project.findById(req.params.id);
+    const { data: project } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('id', req.params.id)
+        .single();
 
     if (!project) {
         res.status(404);
         throw new Error('Project not found');
     }
 
-    await project.deleteOne();
+    const { error } = await supabase
+        .from('projects')
+        .delete()
+        .eq('id', req.params.id);
 
-    // Audit Log
-    await logAction({
-        userId: req.user.id || req.user._id,
-        userEmail: req.user.email,
+    if (error) {
+        res.status(500);
+        throw new Error(`Failed to delete project: ${error.message}`);
+    }
+
+    // Audit Log (Optimistic)
+    logAction({
+        userId: req.user?.id,
+        userEmail: req.user?.email,
         action: 'PROJECT_DELETED',
         entityType: 'Project',
-        entityId: project._id,
+        entityId: project.id,
         metadata: { before: project },
         ipAddress: req.ip
-    });
+    }).catch(err => console.error("Audit log failed:", err.message));
 
     res.status(200).json({ success: true, data: { id: req.params.id } });
 });
@@ -153,11 +196,16 @@ const deleteProject = asyncHandler(async (req, res) => {
 // @route   GET /api/projects/:id/chat
 // @access  Private
 const getProjectChat = asyncHandler(async (req, res) => {
-    const ChatMessage = require('../models/ChatMessage');
-    const messages = await ChatMessage.find({ projectId: req.params.id })
-        .populate('sender', 'name avatar email')
-        .sort('createdAt')
-        .lean();
+    const { data: messages, error } = await supabase
+        .from('chat_messages')
+        .select('*, sender:users(id, name, email)')
+        .eq('project_id', req.params.id)
+        .order('created_at', { ascending: true });
+
+    if (error) {
+        res.status(500);
+        throw new Error(`Failed to fetch chat: ${error.message}`);
+    }
 
     res.status(200).json({ success: true, data: messages });
 });
