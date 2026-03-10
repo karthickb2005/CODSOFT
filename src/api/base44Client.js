@@ -48,7 +48,7 @@ api.interceptors.response.use(
         if (error.response?.status === 401 && !originalRequest._retry) {
             originalRequest._retry = true;
             try {
-                const response = await api.post(`/api/auth/refresh`, {});
+                const response = await api.post(`/auth/refresh`, {});
                 // Backend: { success: true, data: { token: "..." } }
                 const { token } = response.data?.data || response.data;
                 localStorage.setItem('accessToken', token);
@@ -70,23 +70,23 @@ const unwrap = (res) => res.data?.data ?? res.data;
 
 const createEntityService = (endpoint) => ({
     list: async (orderBy = '', limit = 100) => {
-        const response = await api.get(`/api/${endpoint}`, { params: { orderBy, limit } });
+        const response = await api.get(`/${endpoint}`, { params: { orderBy, limit } });
         return unwrap(response);
     },
     filter: async (filterObj = {}, orderBy = '', limit = 100) => {
-        const response = await api.get(`/api/${endpoint}`, { params: { ...filterObj, orderBy, limit } });
+        const response = await api.get(`/${endpoint}`, { params: { ...filterObj, orderBy, limit } });
         return unwrap(response);
     },
     create: async (data) => {
-        const response = await api.post(`/api/${endpoint}`, data);
+        const response = await api.post(`/${endpoint}`, data);
         return unwrap(response);
     },
     update: async (id, data) => {
-        const response = await api.put(`/api/${endpoint}/${id}`, data);
+        const response = await api.put(`/${endpoint}/${id}`, data);
         return unwrap(response);
     },
     delete: async (id) => {
-        const response = await api.delete(`/api/${endpoint}/${id}`);
+        const response = await api.delete(`/${endpoint}/${id}`);
         return unwrap(response);
     },
 });
@@ -94,7 +94,7 @@ const createEntityService = (endpoint) => ({
 const base44 = {
     auth: {
         me: async () => {
-            const response = await api.get('/api/auth/me');
+            const response = await api.get('/auth/me');
             const data = response.data?.data || response.data;
             // Map backend field names to frontend expected names if necessary
             return {
@@ -112,11 +112,11 @@ const base44 = {
         User: {
             ...createEntityService('users'),
             login: (data) => {
-                console.log("AUTH CALL:", `/api/auth/login`);
-                return api.post(`/api/auth/login`, data);
+                console.log("AUTH CALL:", `/auth/login`);
+                return api.post(`/auth/login`, data);
             },
-            signup: (data) => api.post(`/api/users/register`, data),
-            refresh: () => api.post(`/api/auth/refresh`, {})
+            signup: (data) => api.post(`/users/register`, data),
+            refresh: () => api.post(`/auth/refresh`, {})
         },
         TeamMember: createEntityService('team'),
         Workspace: {
@@ -125,13 +125,13 @@ const base44 = {
         AIAnalysis: {
             ...createEntityService('ai-insights'),
             dashboard: async () => {
-                const response = await api.get('/api/ai-insights/dashboard');
+                const response = await api.get('/ai-insights/dashboard');
                 return response.data?.data || response.data;
             }
         },
         Activity: {
             feed: async (page = 1, limit = 20) => {
-                const response = await api.get(`/api/activity?page=${page}&limit=${limit}`);
+                const response = await api.get(`/activity?page=${page}&limit=${limit}`);
                 return response.data?.data || response.data;
             }
         },
@@ -142,11 +142,11 @@ const base44 = {
         },
         Invite: {
             get: async (token) => {
-                const response = await api.get(`/api/invite/${token}`);
+                const response = await api.get(`/invite/${token}`);
                 return response.data?.data || response.data;
             },
             accept: async (token) => {
-                const response = await api.post('/api/invite/accept', { token });
+                const response = await api.post('/invite/accept', { token });
                 return response.data?.data || response.data;
             }
         }
@@ -154,13 +154,13 @@ const base44 = {
     integrations: {
         Core: {
             InvokeLLM: async (data) => {
-                const response = await api.post('/api/ai-insights/invoke', data);
+                const response = await api.post('/ai-insights/invoke', data);
                 return response.data?.data || response.data;
             }
         },
         Analytics: {
             summary: async () => {
-                const response = await api.get('/api/analytics');
+                const response = await api.get('/analytics');
                 return response.data?.data || response.data;
             }
         }
