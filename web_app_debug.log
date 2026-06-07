@@ -1,0 +1,985 @@
+2026-02-10 10:55:44,920 - WARNING -  * Debugger is active!
+2026-02-10 10:55:44,922 - WARNING -  * Debugger is active!
+2026-02-10 10:55:44,923 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 10:55:44,925 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 10:56:10,929 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 10:56:10,929 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 10:56:10,930 - INFO -  * Restarting with stat
+2026-02-10 10:56:11,878 - WARNING -  * Debugger is active!
+2026-02-10 10:56:11,879 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 10:56:40,985 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 10:56:40,985 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 10:56:40,990 - INFO -  * Restarting with stat
+2026-02-10 10:56:43,597 - WARNING -  * Debugger is active!
+2026-02-10 10:56:43,599 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:00:23,920 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:00:24,033 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:00:24,095 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:00:24,174 - INFO -  * Restarting with stat
+2026-02-10 11:00:24,517 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:00:24,721 - INFO -  * Restarting with stat
+2026-02-10 11:00:29,247 - WARNING -  * Debugger is active!
+2026-02-10 11:00:29,249 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:00:29,279 - WARNING -  * Debugger is active!
+2026-02-10 11:00:29,281 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:00:29,282 - WARNING -  * Debugger is active!
+2026-02-10 11:00:29,283 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:00:29,294 - WARNING -  * Debugger is active!
+2026-02-10 11:00:29,295 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:00:43,492 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:00:43,493 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:00:43,499 - INFO -  * Restarting with stat
+2026-02-10 11:00:48,180 - WARNING -  * Debugger is active!
+2026-02-10 11:00:48,181 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:01:28,646 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:01:28,646 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:01:28,647 - INFO -  * Restarting with stat
+2026-02-10 11:01:30,641 - WARNING -  * Debugger is active!
+2026-02-10 11:01:30,642 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:01:44,842 - INFO - 127.0.0.1 - - [10/Feb/2026 11:01:44] "GET / HTTP/1.1" 200 -
+2026-02-10 11:01:44,935 - INFO - 127.0.0.1 - - [10/Feb/2026 11:01:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 11:01:57,359 - INFO - Received POST request
+2026-02-10 11:01:57,364 - INFO - Saving file: input.pdf
+2026-02-10 11:01:57,370 - INFO - Extracting text...
+2026-02-10 11:01:57,582 - INFO - Extracted 118 characters. Translating...
+2026-02-10 11:01:57,584 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 11:01:57,598 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-10 11:01:57,913 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002346A8D7770>
+2026-02-10 11:01:57,914 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002346A6843B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-10 11:01:57,980 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002346A867610>
+2026-02-10 11:01:57,981 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-10 11:01:57,982 - DEBUG - send_request_headers.complete
+2026-02-10 11:01:57,982 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-10 11:01:57,983 - DEBUG - send_request_body.complete
+2026-02-10 11:01:57,983 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-10 11:01:58,135 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Tue, 10 Feb 2026 05:30:41 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=110'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-10 11:01:58,136 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 11:01:58,137 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-10 11:01:58,139 - DEBUG - receive_response_body.complete
+2026-02-10 11:01:58,140 - DEBUG - response_closed.started
+2026-02-10 11:01:58,141 - DEBUG - response_closed.complete
+2026-02-10 11:01:58,142 - ERROR - Error during processing: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 18.793034998s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\web_app.py", line 49, in index
+    tamil_text = translate_text(text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 38, in translate_text
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 5474, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 4214, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1386, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1222, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1199, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 159, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 18.793034998s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+2026-02-10 11:01:58,217 - INFO - 127.0.0.1 - - [10/Feb/2026 11:01:58] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2026-02-10 11:01:58,320 - INFO - 127.0.0.1 - - [10/Feb/2026 11:01:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 11:36:32,692 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:36:32,692 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:36:32,693 - INFO -  * Restarting with stat
+2026-02-10 11:36:34,172 - WARNING -  * Debugger is active!
+2026-02-10 11:36:34,173 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:37:55,329 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,351 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,382 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,384 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,407 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,408 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,611 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-10 11:37:55,798 - INFO -  * Restarting with stat
+2026-02-10 11:37:55,870 - INFO -  * Restarting with stat
+2026-02-10 11:37:55,911 - INFO -  * Restarting with stat
+2026-02-10 11:37:55,912 - INFO -  * Restarting with stat
+2026-02-10 11:37:56,051 - INFO -  * Restarting with stat
+2026-02-10 11:38:01,320 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,321 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,387 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,388 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,420 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,421 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,447 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,449 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,450 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,452 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,460 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,461 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:01,494 - WARNING -  * Debugger is active!
+2026-02-10 11:38:01,496 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:38:09,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:38:09,403 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:38:09,404 - INFO -  * Restarting with stat
+2026-02-10 11:38:28,692 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:38:28,692 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:38:28,693 - INFO -  * Restarting with stat
+2026-02-10 11:38:30,840 - WARNING -  * Debugger is active!
+2026-02-10 11:38:30,842 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:39:18,232 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:39:18,232 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:39:18,233 - INFO -  * Restarting with stat
+2026-02-10 11:39:19,844 - WARNING -  * Debugger is active!
+2026-02-10 11:39:19,845 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:40:55,886 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:40:55,886 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:40:55,888 - INFO -  * Restarting with stat
+2026-02-10 11:40:57,632 - WARNING -  * Debugger is active!
+2026-02-10 11:40:57,635 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:41:48,032 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 11:41:48,032 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:41:48,033 - INFO -  * Restarting with stat
+2026-02-10 11:41:49,703 - WARNING -  * Debugger is active!
+2026-02-10 11:41:49,705 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 11:43:08,620 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:08] "GET / HTTP/1.1" 200 -
+2026-02-10 11:43:08,763 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 11:43:21,281 - INFO - Received POST request
+2026-02-10 11:43:21,284 - INFO - Saving file: input.pdf
+2026-02-10 11:43:21,288 - INFO - Extracting text...
+2026-02-10 11:43:21,465 - INFO - Extracted 118 characters. Translating...
+2026-02-10 11:43:21,468 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 11:43:21,478 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-10 11:43:21,718 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000263A4333770>
+2026-02-10 11:43:21,720 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000263A40E43B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-10 11:43:21,854 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000263A42C7610>
+2026-02-10 11:43:21,856 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-10 11:43:21,859 - DEBUG - send_request_headers.complete
+2026-02-10 11:43:21,860 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-10 11:43:21,862 - DEBUG - send_request_body.complete
+2026-02-10 11:43:21,863 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-10 11:43:22,025 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Tue, 10 Feb 2026 06:12:05 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=104'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-10 11:43:22,027 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 11:43:22,030 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-10 11:43:22,034 - DEBUG - receive_response_body.complete
+2026-02-10 11:43:22,035 - DEBUG - response_closed.started
+2026-02-10 11:43:22,036 - DEBUG - response_closed.complete
+2026-02-10 11:43:22,038 - ERROR - Error during processing: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 54.891923105s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\web_app.py", line 49, in index
+    tamil_text = translate_text(text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 38, in translate_text
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 5474, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 4214, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1386, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1222, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1199, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 159, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 54.891923105s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}
+2026-02-10 11:43:22,079 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:22] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2026-02-10 11:43:22,150 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:22] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 11:43:45,037 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:45] "GET / HTTP/1.1" 200 -
+2026-02-10 11:43:45,099 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 11:43:54,340 - INFO - Received POST request
+2026-02-10 11:43:54,342 - INFO - Saving file: input.pdf
+2026-02-10 11:43:54,345 - INFO - Extracting text...
+2026-02-10 11:43:54,381 - INFO - Extracted 118 characters. Translating...
+2026-02-10 11:43:54,382 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-10 11:43:54,384 - DEBUG - close.started
+2026-02-10 11:43:54,387 - DEBUG - close.complete
+2026-02-10 11:43:54,387 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-10 11:43:54,422 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000263A574D090>
+2026-02-10 11:43:54,423 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000263A40E43B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-10 11:43:54,495 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000263A431E2C0>
+2026-02-10 11:43:54,495 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-10 11:43:54,497 - DEBUG - send_request_headers.complete
+2026-02-10 11:43:54,497 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-10 11:43:54,498 - DEBUG - send_request_body.complete
+2026-02-10 11:43:54,498 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-10 11:43:54,697 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Tue, 10 Feb 2026 06:12:37 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=105'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-10 11:43:54,699 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-10 11:43:54,699 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-10 11:43:54,701 - DEBUG - receive_response_body.complete
+2026-02-10 11:43:54,702 - DEBUG - response_closed.started
+2026-02-10 11:43:54,702 - DEBUG - response_closed.complete
+2026-02-10 11:43:54,703 - ERROR - Error during processing: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 22.25960851s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\web_app.py", line 49, in index
+    tamil_text = translate_text(text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 38, in translate_text
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 5474, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 4214, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1386, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1222, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1199, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 159, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 22.25960851s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}
+2026-02-10 11:43:54,735 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:54] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2026-02-10 11:43:54,771 - INFO - 127.0.0.1 - - [10/Feb/2026 11:43:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 19:22:38,429 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-10 19:22:38,430 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 19:22:38,433 - INFO -  * Restarting with stat
+2026-02-10 19:22:40,434 - WARNING -  * Debugger is active!
+2026-02-10 19:22:40,438 - INFO -  * Debugger PIN: 763-906-801
+2026-02-10 19:23:07,648 - INFO - 127.0.0.1 - - [10/Feb/2026 19:23:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-10 19:23:10,288 - INFO - 127.0.0.1 - - [10/Feb/2026 19:23:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-13 13:32:11,328 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-13 13:32:11,330 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-13 13:32:11,336 - INFO -  * Restarting with stat
+2026-02-13 13:32:13,695 - WARNING -  * Debugger is active!
+2026-02-13 13:32:13,697 - INFO -  * Debugger PIN: 763-906-801
+2026-02-13 13:39:51,505 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-13 13:39:51,960 - INFO -  * Restarting with stat
+2026-02-13 13:39:59,551 - WARNING -  * Debugger is active!
+2026-02-13 13:39:59,560 - INFO -  * Debugger PIN: 763-906-801
+2026-02-13 13:41:59,853 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-13 13:41:59,853 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-13 13:41:59,855 - INFO -  * Restarting with stat
+2026-02-13 13:42:03,581 - WARNING -  * Debugger is active!
+2026-02-13 13:42:03,583 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:34:40,378 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:34:40,379 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:34:40,380 - INFO -  * Restarting with stat
+2026-02-18 11:34:41,868 - WARNING -  * Debugger is active!
+2026-02-18 11:34:41,870 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:35:07,212 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:35:07,212 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:35:07,213 - INFO -  * Restarting with stat
+2026-02-18 11:35:08,722 - WARNING -  * Debugger is active!
+2026-02-18 11:35:08,724 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:36:19,516 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:36:19,516 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:36:19,517 - INFO -  * Restarting with stat
+2026-02-18 11:36:21,062 - WARNING -  * Debugger is active!
+2026-02-18 11:36:21,063 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:37:51,294 - INFO - 127.0.0.1 - - [18/Feb/2026 11:37:51] "GET / HTTP/1.1" 200 -
+2026-02-18 11:37:51,405 - INFO - 127.0.0.1 - - [18/Feb/2026 11:37:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-18 11:38:09,219 - INFO - Received POST request
+2026-02-18 11:38:09,224 - INFO - Saving file: ATS Resume..1.pdf (2).pdf
+2026-02-18 11:38:09,226 - INFO - Extracting text...
+2026-02-18 11:38:09,363 - INFO - Extracted 2171 characters. Translating...
+2026-02-18 11:38:09,364 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 11:38:09,374 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 11:38:09,432 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001E22CF33A10>
+2026-02-18 11:38:09,433 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001E22CCE83B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 11:38:09,526 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001E22CEC7B10>
+2026-02-18 11:38:09,527 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 11:38:09,529 - DEBUG - send_request_headers.complete
+2026-02-18 11:38:09,530 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 11:38:09,531 - DEBUG - send_request_body.complete
+2026-02-18 11:38:09,531 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 11:38:09,684 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:06:49 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=121'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 11:38:09,685 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 11:38:09,686 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 11:38:09,687 - DEBUG - receive_response_body.complete
+2026-02-18 11:38:09,688 - DEBUG - response_closed.started
+2026-02-18 11:38:09,688 - DEBUG - response_closed.complete
+2026-02-18 11:38:09,689 - ERROR - Error during processing: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 10.036717684s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\web_app.py", line 49, in index
+    tamil_text = translate_text(text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 38, in translate_text
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=prompt
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 5474, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\models.py", line 4214, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1386, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1222, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\_api_client.py", line 1199, in _request_once
+    errors.APIError.raise_for_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 134, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN B\AppData\Local\Programs\Python\Python314\Lib\site-packages\google\genai\errors.py", line 159, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 10.036717684s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}
+2026-02-18 11:38:10,029 - INFO - 127.0.0.1 - - [18/Feb/2026 11:38:10] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2026-02-18 11:38:10,095 - INFO - 127.0.0.1 - - [18/Feb/2026 11:38:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-18 11:38:49,312 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:38:49,313 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:38:49,591 - INFO -  * Restarting with stat
+2026-02-18 11:38:49,608 - INFO -  * Restarting with stat
+2026-02-18 11:38:52,063 - WARNING -  * Debugger is active!
+2026-02-18 11:38:52,065 - WARNING -  * Debugger is active!
+1
+2026-02-18 11:38:52,067 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:39:52,396 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:39:52,403 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:39:52,652 - INFO -  * Restarting with stat
+2026-02-18 11:39:52,678 - INFO -  * Restarting with stat
+2026-02-18 11:39:55,001 - WARNING -  * Debugger is active!
+2026-02-18 11:39:55,003 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:39:55,020 - WARNING -  * Debugger is active!
+2026-02-18 11:39:55,021 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:46:23,516 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:46:23,566 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:46:23,778 - INFO -  * Restarting with stat
+2026-02-18 11:46:23,824 - INFO -  * Restarting with stat
+2026-02-18 11:47:18,404 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:47:18,405 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:47:18,406 - INFO -  * Restarting with stat
+2026-02-18 11:47:19,240 - WARNING -  * Debugger is active!
+2026-02-18 11:47:19,243 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:48:18,674 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:48:18,675 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:48:18,676 - INFO -  * Restarting with stat
+2026-02-18 11:48:19,502 - WARNING -  * Debugger is active!
+2026-02-18 11:48:19,503 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:50:28,316 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:50:28,358 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:50:28,530 - INFO -  * Restarting with stat
+2026-02-18 11:50:28,589 - INFO -  * Restarting with stat
+2026-02-18 11:50:30,916 - WARNING -  * Debugger is active!
+2026-02-18 11:50:30,917 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:50:30,927 - WARNING -  * Debugger is active!
+2026-02-18 11:50:30,929 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:50:36,964 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app_with_retry.py', reloading
+2026-02-18 11:50:37,227 - INFO -  * Restarting with stat
+2026-02-18 11:50:37,234 - INFO -  * Restarting with stat
+2026-02-18 11:50:39,695 - WARNING -  * Debugger is active!
+2026-02-18 11:50:39,696 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:50:39,706 - WARNING -  * Debugger is active!
+2026-02-18 11:50:39,708 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:50:55,328 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:50:55,328 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:50:55,331 - INFO -  * Restarting with stat
+2026-02-18 11:50:57,002 - WARNING -  * Debugger is active!
+2026-02-18 11:50:57,003 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:54:17,001 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:54:17,001 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:54:17,002 - INFO -  * Restarting with stat
+2026-02-18 11:54:18,558 - WARNING -  * Debugger is active!
+2026-02-18 11:54:18,559 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:55:48,053 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:55:48,054 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:55:48,149 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:55:48,174 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:55:48,364 - INFO -  * Restarting with stat
+2026-02-18 11:55:48,389 - INFO -  * Restarting with stat
+2026-02-18 11:55:48,466 - INFO -  * Restarting with stat
+2026-02-18 11:55:48,497 - INFO -  * Restarting with stat
+2026-02-18 11:55:51,728 - WARNING -  * Debugger is active!
+2026-02-18 11:55:51,730 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:55:51,739 - WARNING -  * Debugger is active!
+2026-02-18 11:55:51,741 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:55:51,750 - WARNING -  * Debugger is active!
+2026-02-18 11:55:51,751 - WARNING -  * Debugger is active!
+2026-02-18 11:55:51,752 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:55:51,753 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:56:59,047 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\list_models_new_sdk.py', reloading
+2026-02-18 11:56:59,052 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\list_models_new_sdk.py', reloading
+2026-02-18 11:56:59,067 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\list_models_new_sdk.py', reloading
+2026-02-18 11:56:59,069 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\list_models_new_sdk.py', reloading
+2026-02-18 11:56:59,428 - INFO -  * Restarting with stat
+2026-02-18 11:56:59,431 - INFO -  * Restarting with stat
+2026-02-18 11:56:59,434 - INFO -  * Restarting with stat
+2026-02-18 11:56:59,435 - INFO -  * Restarting with stat
+2026-02-18 11:57:02,451 - WARNING -  * Debugger is active!
+2026-02-18 11:57:02,452 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:57:02,483 - WARNING -  * Debugger is active!
+2026-02-18 11:57:02,485 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:57:02,518 - WARNING -  * Debugger is active!
+2026-02-18 11:57:02,521 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:57:02,536 - WARNING -  * Debugger is active!
+2026-02-18 11:57:02,537 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:58:24,885 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:58:24,913 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:58:24,969 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:58:25,028 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 11:58:25,196 - INFO -  * Restarting with stat
+2026-02-18 11:58:25,225 - INFO -  * Restarting with stat
+2026-02-18 11:58:25,277 - INFO -  * Restarting with stat
+2026-02-18 11:58:25,312 - INFO -  * Restarting with stat
+2026-02-18 11:58:28,408 - WARNING -  * Debugger is active!
+2026-02-18 11:58:28,410 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:58:28,478 - WARNING -  * Debugger is active!
+2026-02-18 11:58:28,479 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:58:28,532 - WARNING -  * Debugger is active!
+2026-02-18 11:58:28,534 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:58:28,587 - WARNING -  * Debugger is active!
+2026-02-18 11:58:28,588 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 11:59:00,969 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 11:59:00,969 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 11:59:00,970 - INFO -  * Restarting with stat
+2026-02-18 12:00:58,402 - INFO - Received POST request
+2026-02-18 12:00:58,405 - INFO - Saving file: ATS Resume..1.pdf (2).pdf
+2026-02-18 12:00:58,407 - INFO - Extracting text...
+2026-02-18 12:00:58,479 - INFO - Extracted 2171 characters. Translating...
+2026-02-18 12:00:58,481 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:00:58,488 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:00:58,660 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE82F90>
+2026-02-18 12:00:58,662 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:00:58,712 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE16AD0>
+2026-02-18 12:00:58,713 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:00:58,714 - DEBUG - send_request_headers.complete
+2026-02-18 12:00:58,714 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:00:58,715 - DEBUG - send_request_body.complete
+2026-02-18 12:00:58,715 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:00:58,863 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:29:39 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=91'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:00:58,866 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:00:58,867 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:00:58,867 - DEBUG - receive_response_body.complete
+2026-02-18 12:00:58,868 - DEBUG - response_closed.started
+2026-02-18 12:00:58,868 - DEBUG - response_closed.complete
+2026-02-18 12:01:21,733 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:01:21,734 - DEBUG - close.started
+2026-02-18 12:01:21,735 - DEBUG - close.complete
+2026-02-18 12:01:21,735 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:01:21,811 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE17C50>
+2026-02-18 12:01:21,811 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:01:21,901 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE6D6E0>
+2026-02-18 12:01:21,902 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:01:21,902 - DEBUG - send_request_headers.complete
+2026-02-18 12:01:21,903 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:01:21,903 - DEBUG - send_request_body.complete
+2026-02-18 12:01:21,903 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:01:22,102 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:30:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=100'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:01:22,102 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:01:22,103 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:01:22,103 - DEBUG - receive_response_body.complete
+2026-02-18 12:01:22,103 - DEBUG - response_closed.started
+2026-02-18 12:01:22,104 - DEBUG - response_closed.complete
+2026-02-18 12:01:42,734 - INFO - 127.0.0.1 - - [18/Feb/2026 12:01:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-18 12:02:21,778 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:02:21,779 - DEBUG - close.started
+2026-02-18 12:02:21,780 - DEBUG - close.complete
+2026-02-18 12:02:21,782 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:02:21,812 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE6DE00>
+2026-02-18 12:02:21,813 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:02:21,908 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE271D0>
+2026-02-18 12:02:21,909 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:02:21,909 - DEBUG - send_request_headers.complete
+2026-02-18 12:02:21,909 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:02:21,909 - DEBUG - send_request_body.complete
+2026-02-18 12:02:21,909 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:02:22,110 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:31:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=112'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:02:22,111 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:02:22,111 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:02:22,112 - DEBUG - receive_response_body.complete
+2026-02-18 12:02:22,112 - DEBUG - response_closed.started
+2026-02-18 12:02:22,112 - DEBUG - response_closed.complete
+2026-02-18 12:02:35,720 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 12:02:35,720 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 12:02:35,722 - INFO -  * Restarting with stat
+2026-02-18 12:02:37,228 - WARNING -  * Debugger is active!
+2026-02-18 12:02:37,229 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:03:21,765 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:03:21,766 - DEBUG - close.started
+2026-02-18 12:03:21,766 - DEBUG - close.complete
+2026-02-18 12:03:21,767 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:03:21,816 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE23BD0>
+2026-02-18 12:03:21,816 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:03:21,913 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE23CE0>
+2026-02-18 12:03:21,914 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:03:21,914 - DEBUG - send_request_headers.complete
+2026-02-18 12:03:21,914 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:03:21,915 - DEBUG - send_request_body.complete
+2026-02-18 12:03:21,915 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:03:22,028 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:32:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=85'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:03:22,029 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:03:22,029 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:03:22,029 - DEBUG - receive_response_body.complete
+2026-02-18 12:03:22,030 - DEBUG - response_closed.started
+2026-02-18 12:03:22,030 - DEBUG - response_closed.complete
+2026-02-18 12:04:21,704 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:04:21,706 - DEBUG - close.started
+2026-02-18 12:04:21,707 - DEBUG - close.complete
+2026-02-18 12:04:21,707 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:04:21,817 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE47350>
+2026-02-18 12:04:21,817 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:04:21,878 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE47450>
+2026-02-18 12:04:21,878 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:04:21,878 - DEBUG - send_request_headers.complete
+2026-02-18 12:04:21,879 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:04:21,879 - DEBUG - send_request_body.complete
+2026-02-18 12:04:21,879 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:04:22,131 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:33:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=105'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:04:22,132 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:04:22,132 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:04:22,132 - DEBUG - receive_response_body.complete
+2026-02-18 12:04:22,132 - DEBUG - response_closed.started
+2026-02-18 12:04:22,132 - DEBUG - response_closed.complete
+2026-02-18 12:04:45,768 - INFO - 127.0.0.1 - - [18/Feb/2026 12:04:45] "GET / HTTP/1.1" 200 -
+2026-02-18 12:04:45,845 - INFO - 127.0.0.1 - - [18/Feb/2026 12:04:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-18 12:04:59,637 - INFO - Received POST request
+2026-02-18 12:04:59,642 - INFO - Saving file: input.pdf
+2026-02-18 12:04:59,646 - INFO - Extracting text...
+2026-02-18 12:04:59,704 - INFO - Extracted 118 characters. Translating...
+2026-02-18 12:04:59,707 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:04:59,710 - DEBUG - close.started
+2026-02-18 12:04:59,712 - DEBUG - close.complete
+2026-02-18 12:04:59,714 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:04:59,842 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE9BE30>
+2026-02-18 12:04:59,843 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:04:59,913 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FEF4050>
+2026-02-18 12:04:59,913 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:04:59,914 - DEBUG - send_request_headers.complete
+2026-02-18 12:04:59,914 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:04:59,915 - DEBUG - send_request_body.complete
+2026-02-18 12:04:59,916 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:05:00,116 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:33:40 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=107'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:05:00,118 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:05:00,118 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:05:00,119 - DEBUG - receive_response_body.complete
+2026-02-18 12:05:00,119 - DEBUG - response_closed.started
+2026-02-18 12:05:00,119 - DEBUG - response_closed.complete
+2026-02-18 12:05:21,772 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:05:21,774 - DEBUG - close.started
+2026-02-18 12:05:21,775 - DEBUG - close.complete
+2026-02-18 12:05:21,775 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:05:21,821 - ERROR - Error during processing: Failed to translate chunk 1 after 5 retries.
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\web_app.py", line 49, in index
+    tamil_text = translate_text(text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 65, in translate_text
+    raise Exception(f"Failed to translate chunk {i+1} after 5 retries.")
+Exception: Failed to translate chunk 1 after 5 retries.
+2026-02-18 12:05:21,826 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FF00210>
+2026-02-18 12:05:21,826 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:05:21,827 - INFO - 127.0.0.1 - - [18/Feb/2026 12:05:21] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2026-02-18 12:05:21,862 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FF004B0>
+2026-02-18 12:05:21,862 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:05:21,863 - DEBUG - send_request_headers.complete
+2026-02-18 12:05:21,863 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:05:21,863 - DEBUG - send_request_body.complete
+2026-02-18 12:05:21,863 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:05:22,037 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:34:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=109'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:05:22,038 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:05:22,038 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:05:22,040 - DEBUG - receive_response_body.complete
+2026-02-18 12:05:22,040 - DEBUG - response_closed.started
+2026-02-18 12:05:22,040 - DEBUG - response_closed.complete
+2026-02-18 12:05:46,764 - INFO - 127.0.0.1 - - [18/Feb/2026 12:05:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-18 12:06:21,744 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:06:21,745 - DEBUG - close.started
+2026-02-18 12:06:21,746 - DEBUG - close.complete
+2026-02-18 12:06:21,746 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:06:21,832 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FE7F110>
+2026-02-18 12:06:21,832 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:06:22,038 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FA9F350>
+2026-02-18 12:06:22,038 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:06:22,038 - DEBUG - send_request_headers.complete
+2026-02-18 12:06:22,038 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:06:22,038 - DEBUG - send_request_body.complete
+2026-02-18 12:06:22,039 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:06:22,179 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:35:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=114'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:06:22,180 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:06:22,181 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:06:22,182 - DEBUG - receive_response_body.complete
+2026-02-18 12:06:22,182 - DEBUG - response_closed.started
+2026-02-18 12:06:22,182 - DEBUG - response_closed.complete
+2026-02-18 12:07:21,705 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:07:21,706 - DEBUG - close.started
+2026-02-18 12:07:21,707 - DEBUG - close.complete
+2026-02-18 12:07:21,708 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:07:21,739 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FA9F590>
+2026-02-18 12:07:21,740 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002755FC343B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:07:21,841 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002755FEE5C80>
+2026-02-18 12:07:21,842 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:07:21,844 - DEBUG - send_request_headers.complete
+2026-02-18 12:07:21,844 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:07:21,845 - DEBUG - send_request_body.complete
+2026-02-18 12:07:21,845 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:07:22,045 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:36:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=99'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:07:22,046 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:07:22,046 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:07:22,046 - DEBUG - receive_response_body.complete
+2026-02-18 12:07:22,046 - DEBUG - response_closed.started
+2026-02-18 12:07:22,046 - DEBUG - response_closed.complete
+2026-02-18 12:07:52,415 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:07:52,463 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:07:52,605 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:07:52,615 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:07:52,711 - INFO -  * Restarting with stat
+2026-02-18 12:07:52,779 - INFO -  * Restarting with stat
+2026-02-18 12:07:52,940 - INFO -  * Restarting with stat
+2026-02-18 12:07:52,942 - INFO -  * Restarting with stat
+2026-02-18 12:07:56,047 - WARNING -  * Debugger is active!
+2026-02-18 12:07:56,049 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:07:56,071 - WARNING -  * Debugger is active!
+2026-02-18 12:07:56,073 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:07:56,131 - WARNING -  * Debugger is active!
+2026-02-18 12:07:56,132 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:07:56,142 - WARNING -  * Debugger is active!
+2026-02-18 12:07:56,143 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:07:56,151 - INFO - Received POST request
+2026-02-18 12:07:56,152 - INFO - Saving file: input.pdf
+2026-02-18 12:07:56,152 - INFO - Extracting text...
+2026-02-18 12:07:56,160 - INFO - Extracted 118 characters. Translating...
+2026-02-18 12:07:56,160 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:07:56,162 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:07:56,192 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABBF6F90>
+2026-02-18 12:07:56,192 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002A7AB9A83B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:07:56,225 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABB86990>
+2026-02-18 12:07:56,226 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:07:56,227 - DEBUG - send_request_headers.complete
+2026-02-18 12:07:56,228 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:07:56,228 - DEBUG - send_request_body.complete
+2026-02-18 12:07:56,229 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:07:56,357 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:36:36 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=98'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:07:56,358 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:07:56,359 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:07:56,360 - DEBUG - receive_response_body.complete
+2026-02-18 12:07:56,361 - DEBUG - response_closed.started
+2026-02-18 12:07:56,361 - DEBUG - response_closed.complete
+2026-02-18 12:08:06,166 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 12:08:06,166 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 12:08:06,167 - INFO -  * Restarting with stat
+2026-02-18 12:08:07,886 - WARNING -  * Debugger is active!
+2026-02-18 12:08:07,888 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:08:21,707 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:08:21,709 - DEBUG - close.started
+2026-02-18 12:08:21,710 - DEBUG - close.complete
+2026-02-18 12:08:21,710 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:08:21,739 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABB87B10>
+2026-02-18 12:08:21,739 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002A7AB9A83B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:08:21,771 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABBDD6E0>
+2026-02-18 12:08:21,771 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:08:21,771 - DEBUG - send_request_headers.complete
+2026-02-18 12:08:21,771 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:08:21,771 - DEBUG - send_request_body.complete
+2026-02-18 12:08:21,771 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:08:21,894 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:37:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=92'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:08:21,894 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:08:21,895 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:08:21,895 - DEBUG - receive_response_body.complete
+2026-02-18 12:08:21,895 - DEBUG - response_closed.started
+2026-02-18 12:08:21,896 - DEBUG - response_closed.complete
+2026-02-18 12:09:21,702 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:09:21,705 - DEBUG - close.started
+2026-02-18 12:09:21,706 - DEBUG - close.complete
+2026-02-18 12:09:21,707 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:09:21,848 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABBDDA70>
+2026-02-18 12:09:21,850 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002A7AB9A83B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:09:21,954 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABB9B1D0>
+2026-02-18 12:09:21,955 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:09:21,957 - DEBUG - send_request_headers.complete
+2026-02-18 12:09:21,957 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:09:21,957 - DEBUG - send_request_body.complete
+2026-02-18 12:09:21,958 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:09:22,362 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:38:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=95'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:09:22,363 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:09:22,363 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:09:22,363 - DEBUG - receive_response_body.complete
+2026-02-18 12:09:22,364 - DEBUG - response_closed.started
+2026-02-18 12:09:22,364 - DEBUG - response_closed.complete
+2026-02-18 12:10:21,982 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:10:21,983 - DEBUG - close.started
+2026-02-18 12:10:21,984 - DEBUG - close.complete
+2026-02-18 12:10:21,985 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:10:22,065 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABB93CE0>
+2026-02-18 12:10:22,066 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002A7AB9A83B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:10:22,177 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A7ABB93DF0>
+2026-02-18 12:10:22,178 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:10:22,178 - DEBUG - send_request_headers.complete
+2026-02-18 12:10:22,179 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:10:22,179 - DEBUG - send_request_body.complete
+2026-02-18 12:10:22,180 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:10:22,372 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:39:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=128'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:10:22,373 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:10:22,373 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:10:22,374 - DEBUG - receive_response_body.complete
+2026-02-18 12:10:22,374 - DEBUG - response_closed.started
+2026-02-18 12:10:22,375 - DEBUG - response_closed.complete
+2026-02-18 12:10:33,086 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:10:33,264 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:10:33,341 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:10:33,358 - INFO -  * Restarting with stat
+2026-02-18 12:10:33,411 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:10:33,450 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:10:33,566 - INFO -  * Restarting with stat
+2026-02-18 12:10:33,664 - INFO -  * Restarting with stat
+2026-02-18 12:10:33,758 - INFO -  * Restarting with stat
+2026-02-18 12:10:33,794 - INFO -  * Restarting with stat
+2026-02-18 12:10:37,093 - WARNING -  * Debugger is active!
+2026-02-18 12:10:37,094 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:10:37,190 - WARNING -  * Debugger is active!
+2026-02-18 12:10:37,192 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:10:37,302 - WARNING -  * Debugger is active!
+2026-02-18 12:10:37,303 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:10:37,354 - WARNING -  * Debugger is active!
+2026-02-18 12:10:37,355 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:10:37,367 - WARNING -  * Debugger is active!
+2026-02-18 12:10:37,368 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:10:48,576 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 12:10:48,576 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 12:10:48,577 - INFO -  * Restarting with stat
+2026-02-18 12:10:50,195 - WARNING -  * Debugger is active!
+2026-02-18 12:10:50,196 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:07,608 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:14:07,654 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:14:07,767 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:14:07,860 - INFO -  * Restarting with stat
+2026-02-18 12:14:07,912 - INFO -  * Restarting with stat
+2026-02-18 12:14:07,954 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:14:08,039 - INFO -  * Restarting with stat
+2026-02-18 12:14:08,044 - INFO -  * Detected change in 'C:\\Users\\THARUN B\\OneDrive\\Desktop\\PDF traslater\\pdf_translator\\app.py', reloading
+2026-02-18 12:14:08,292 - INFO -  * Restarting with stat
+2026-02-18 12:14:08,393 - INFO -  * Restarting with stat
+2026-02-18 12:14:08,404 - INFO -  * Restarting with stat
+2026-02-18 12:14:11,921 - WARNING -  * Debugger is active!
+2026-02-18 12:14:11,923 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:12,044 - WARNING -  * Debugger is active!
+2026-02-18 12:14:12,045 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:12,141 - WARNING -  * Debugger is active!
+2026-02-18 12:14:12,143 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:12,317 - WARNING -  * Debugger is active!
+2026-02-18 12:14:12,319 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:12,394 - WARNING -  * Debugger is active!
+2026-02-18 12:14:12,395 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:12,401 - WARNING -  * Debugger is active!
+2026-02-18 12:14:12,403 - INFO -  * Debugger PIN: 763-906-801
+2026-02-18 12:14:15,400 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-18 12:14:15,400 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-18 12:14:15,401 - INFO -  * Restarting with stat
+2026-02-18 12:14:38,795 - INFO - 127.0.0.1 - - [18/Feb/2026 12:14:38] "GET / HTTP/1.1" 200 -
+2026-02-18 12:14:38,800 - INFO - 127.0.0.1 - - [18/Feb/2026 12:14:38] "GET / HTTP/1.1" 200 -
+2026-02-18 12:14:38,885 - INFO - 127.0.0.1 - - [18/Feb/2026 12:14:38] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-18 12:14:38,888 - INFO - 127.0.0.1 - - [18/Feb/2026 12:14:38] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2026-02-18 12:15:01,217 - INFO - Received POST request
+2026-02-18 12:15:01,224 - INFO - Saving file: input.pdf
+2026-02-18 12:15:01,230 - INFO - Extracting text...
+2026-02-18 12:15:01,293 - INFO - Extracted 118 characters. Translating...
+2026-02-18 12:15:01,596 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:15:01,599 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:15:01,713 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C329E4050>
+2026-02-18 12:15:01,715 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020C327583B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:15:01,824 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C32936C10>
+2026-02-18 12:15:01,825 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:15:01,826 - DEBUG - send_request_headers.complete
+2026-02-18 12:15:01,826 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:15:01,826 - DEBUG - send_request_body.complete
+2026-02-18 12:15:01,826 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:15:02,013 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:43:42 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=110'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:15:02,015 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:15:02,015 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:15:02,017 - DEBUG - receive_response_body.complete
+2026-02-18 12:15:02,017 - DEBUG - response_closed.started
+2026-02-18 12:15:02,018 - DEBUG - response_closed.complete
+2026-02-18 12:15:21,751 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:15:21,752 - DEBUG - close.started
+2026-02-18 12:15:21,753 - DEBUG - close.complete
+2026-02-18 12:15:21,754 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:15:21,797 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C329E8A50>
+2026-02-18 12:15:21,797 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020C327583B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:15:21,940 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C329922C0>
+2026-02-18 12:15:21,941 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:15:21,941 - DEBUG - send_request_headers.complete
+2026-02-18 12:15:21,942 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:15:21,942 - DEBUG - send_request_body.complete
+2026-02-18 12:15:21,943 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:15:22,107 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:44:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=92'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:15:22,107 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:15:22,108 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:15:22,109 - DEBUG - receive_response_body.complete
+2026-02-18 12:15:22,109 - DEBUG - response_closed.started
+2026-02-18 12:15:22,109 - DEBUG - response_closed.complete
+2026-02-18 12:16:21,742 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:16:21,743 - DEBUG - close.started
+2026-02-18 12:16:21,744 - DEBUG - close.complete
+2026-02-18 12:16:21,744 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:16:21,791 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C32992650>
+2026-02-18 12:16:21,791 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020C327583B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:16:21,852 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C3294F530>
+2026-02-18 12:16:21,853 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:16:21,853 - DEBUG - send_request_headers.complete
+2026-02-18 12:16:21,853 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:16:21,854 - DEBUG - send_request_body.complete
+2026-02-18 12:16:21,855 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:16:22,103 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:45:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=103'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:16:22,104 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:16:22,104 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:16:22,106 - DEBUG - receive_response_body.complete
+2026-02-18 12:16:22,106 - DEBUG - response_closed.started
+2026-02-18 12:16:22,106 - DEBUG - response_closed.complete
+2026-02-18 12:17:21,816 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:17:21,817 - DEBUG - close.started
+2026-02-18 12:17:21,818 - DEBUG - close.complete
+2026-02-18 12:17:21,818 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:17:21,870 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C3294BF00>
+2026-02-18 12:17:21,870 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020C327583B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:17:21,906 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C329FC050>
+2026-02-18 12:17:21,907 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:17:21,907 - DEBUG - send_request_headers.complete
+2026-02-18 12:17:21,908 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:17:21,908 - DEBUG - send_request_body.complete
+2026-02-18 12:17:21,909 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:17:22,045 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:46:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=104'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:17:22,045 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:17:22,046 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:17:22,047 - DEBUG - receive_response_body.complete
+2026-02-18 12:17:22,047 - DEBUG - response_closed.started
+2026-02-18 12:17:22,047 - DEBUG - response_closed.complete
+2026-02-18 12:18:21,701 - INFO - AFC is enabled with max remote calls: 10.
+2026-02-18 12:18:21,702 - DEBUG - close.started
+2026-02-18 12:18:21,702 - DEBUG - close.complete
+2026-02-18 12:18:21,702 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2026-02-18 12:18:21,735 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C3296FD50>
+2026-02-18 12:18:21,736 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020C327583B0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2026-02-18 12:18:21,770 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020C3296FE50>
+2026-02-18 12:18:21,770 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-02-18 12:18:21,771 - DEBUG - send_request_headers.complete
+2026-02-18 12:18:21,771 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-02-18 12:18:21,772 - DEBUG - send_request_body.complete
+2026-02-18 12:18:21,772 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-02-18 12:18:21,899 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 18 Feb 2026 06:47:02 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=99'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-02-18 12:18:21,900 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-02-18 12:18:21,900 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-02-18 12:18:21,902 - DEBUG - receive_response_body.complete
+2026-02-18 12:18:21,902 - DEBUG - response_closed.started
+2026-02-18 12:18:21,902 - DEBUG - response_closed.complete
+2026-02-18 12:19:21,696 - INFO - Translation successful.
+2026-02-18 12:19:21,821 - INFO - PDF created. Sending file...
+2026-02-18 12:19:22,016 - INFO - 127.0.0.1 - - [18/Feb/2026 12:19:22] "POST / HTTP/1.1" 200 -
+2026-02-26 20:13:54,305 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-26 20:13:54,307 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-26 20:13:54,310 - INFO -  * Restarting with stat
+2026-02-26 20:13:57,138 - WARNING -  * Debugger is active!
+2026-02-26 20:13:57,142 - INFO -  * Debugger PIN: 559-258-242

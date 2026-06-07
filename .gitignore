@@ -11,11 +11,15 @@ node_modules
 dist
 dist-ssr
 *.local
+
 .env
 .env.*
 !.env.production.example
 
-# Editor directories and files
+__pycache__/
+*.pyc
+.venv/
+
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -28,3 +32,6 @@ dist-ssr
 
 frontend.zip
 *.zip
+
+output_tamil.pdf
+debug_translation.txt

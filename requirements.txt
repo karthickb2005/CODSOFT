@@ -1,0 +1,7 @@
+pymupdf
+googletrans==4.0.0-rc1
+reportlab
+requests
+groq
+python-dotenv
+flask

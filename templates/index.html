@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Translator | English → Tamil</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .upload-box {
+            border: 2px dashed #aaa;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            /* Ensure it behaves like a block */
+        }
+
+        .upload-box:hover {
+            border-color: #667eea;
+            background: #f6f6ff;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btn {
+            margin-top: 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #5563d6;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        #loading {
+            display: none;
+            margin-top: 15px;
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>📄 PDF Translator</h1>
+        <p>Translate English PDF documents into <b>professional Tamil</b></p>
+
+        <!-- Added id="uploadForm" -->
+        <form method="POST" enctype="multipart/form-data" id="uploadForm">
+            <label class="upload-box" id="dropArea">
+                <span id="fileLabel">📂 Click to upload PDF</span>
+                <!-- Added id="pdfInput" -->
+                <input type="file" name="pdf" id="pdfInput" required accept=".pdf">
+            </label>
+
+            <br>
+            <button class="btn" type="submit" id="submitBtn">
+                Translate & Download 🚀
+            </button>
+
+            <div id="loading">
+                ⏳ Processing... Please wait.
+            </div>
+        </form>
+
+        <div class="footer">
+            Powered by Gemini AI • Tamil Unicode Support
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('pdfInput');
+        const fileLabel = document.getElementById('fileLabel');
+        const dropArea = document.getElementById('dropArea');
+        const form = document.getElementById('uploadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loading = document.getElementById('loading');
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                fileLabel.innerText = "✅ " + e.target.files[0].name;
+                dropArea.style.borderColor = "#667eea";
+                dropArea.style.background = "#eef2ff";
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            // Prevent submission if no file (though 'required' attribute handles this usually)
+            if (fileInput.files.length === 0) {
+                e.preventDefault();
+                alert("Please select a file first!");
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.7";
+            submitBtn.innerText = "Translating...";
+            loading.style.display = "block";
+        });
+    </script>
+
+</body>
+
+</html>

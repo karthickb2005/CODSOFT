@@ -1,0 +1,7 @@
+An error occurred: Failed to translate chunk 1 after 5 retries.
+Traceback (most recent call last):
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 134, in <module>
+    tamil_text = translate_text(pdf_text)
+  File "C:\Users\THARUN B\OneDrive\Desktop\PDF traslater\pdf_translator\app.py", line 65, in translate_text
+    raise Exception(f"Failed to translate chunk {i+1} after 5 retries.")
+Exception: Failed to translate chunk 1 after 5 retries.
